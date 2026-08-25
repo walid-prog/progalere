@@ -9,6 +9,7 @@ const I18N = {
     "nav.booking": "Réservation", "nav.about": "À propos",
     "cta.book": "Réserver une consultation", "cta.bookShort": "Réserver",
     "cta.services": "Voir les services",
+    "cta.tagline": "On vous amène, tranquillement, vers plus de temps libre.",
 
     "footer.tagline": "Services professionnels pour les PME, travailleurs autonomes et organisations.",
     "footer.navHeading": "Navigation", "footer.servicesHeading": "Services", "footer.contactHeading": "Contact",
@@ -24,14 +25,14 @@ const I18N = {
     "home.promise": "Comptabilité, automatisation, stratégie et formations, réunies sous un même toit.",
     "home.services.eyebrow": "Nos services", "home.services.h2": "Quatre expertises, un seul partenaire.",
 
-    "platform.eyebrow": "La plateforme Wavora", "platform.h2": "Un seul système, connecté à tout.",
-    "platform.lead": "De la donnée brute à la décision, chaque service alimente le même tableau de bord.",
+    "platform.eyebrow": "Notre approche", "platform.h2": "Des solutions sur mesure, propulsées par l'IA, guidées par des humains.",
+    "platform.lead": "Chaque service est personnalisé et peut être connecté à vos outils. L'IA optimise le travail répétitif, l'expertise humaine reste derrière chaque décision.",
     "flow.doc.title": "Nouveau document", "flow.doc.desc": "Une facture, un reçu, une donnée qui entre dans le système.",
     "flow.ai.title": "Analyse par l'IA", "flow.ai.desc": "Catégorisation, validation et priorisation automatiques.",
     "flow.tag1": "Routine", "flow.entry.title": "Écriture comptable", "flow.entry.desc": "Classée et rapprochée sans intervention.",
     "flow.tag2": "À valider", "flow.notif.title": "Notification à l'équipe", "flow.notif.desc": "Un message clair, au bon moment.",
-    "platform.card1.title": "Vos chiffres, en un coup d'œil.", "platform.card1.desc": "Un tableau de bord qui rassemble comptabilité et opérations, mis à jour automatiquement.",
-    "platform.card2.title": "Des rapports qui se génèrent seuls.", "platform.card2.desc": "Croissance, performance, résultats&nbsp;: exportables en un clic.",
+    "platform.modules.caption": "Des modules classiques, connectés selon vos besoins",
+    "platform.module1": "Factures", "platform.module2": "Marketing", "platform.module3": "Courriels", "platform.module4": "Documents",
 
     "kpi.eyebrow": "Pourquoi maintenant", "kpi.h2": "Ce que l'IA change déjà pour les PME.",
     "kpi.item1.label": "du temps d'un dirigeant part en tâches administratives. On vous le rend.",
@@ -97,6 +98,7 @@ const I18N = {
     "nav.booking": "Booking", "nav.about": "About",
     "cta.book": "Book a consultation", "cta.bookShort": "Book",
     "cta.services": "See our services",
+    "cta.tagline": "We guide you, gently, toward more free time.",
 
     "footer.tagline": "Professional services for SMBs, self-employed professionals, and organizations.",
     "footer.navHeading": "Navigation", "footer.servicesHeading": "Services", "footer.contactHeading": "Contact",
@@ -112,14 +114,14 @@ const I18N = {
     "home.promise": "Accounting, automation, strategy, and training, brought together under one roof.",
     "home.services.eyebrow": "Our services", "home.services.h2": "Four areas of expertise, one partner.",
 
-    "platform.eyebrow": "The Wavora platform", "platform.h2": "One system, connected to everything.",
-    "platform.lead": "From raw data to decision, every service feeds the same dashboard.",
+    "platform.eyebrow": "Our approach", "platform.h2": "Custom solutions, powered by AI, guided by people.",
+    "platform.lead": "Every service is personalized and can be connected to your tools. AI optimizes repetitive work, human expertise stays behind every decision.",
     "flow.doc.title": "New document", "flow.doc.desc": "An invoice, a receipt, a piece of data entering the system.",
     "flow.ai.title": "AI analysis", "flow.ai.desc": "Automatic categorization, validation, and prioritization.",
     "flow.tag1": "Routine", "flow.entry.title": "Accounting entry", "flow.entry.desc": "Classified and reconciled with no manual work.",
     "flow.tag2": "Needs review", "flow.notif.title": "Team notification", "flow.notif.desc": "A clear message, at the right moment.",
-    "platform.card1.title": "Your numbers, at a glance.", "platform.card1.desc": "A dashboard that brings together accounting and operations, updated automatically.",
-    "platform.card2.title": "Reports that build themselves.", "platform.card2.desc": "Growth, performance, results&nbsp;: exportable in one click.",
+    "platform.modules.caption": "Classic modules, connected to fit your needs",
+    "platform.module1": "Invoices", "platform.module2": "Marketing", "platform.module3": "Emails", "platform.module4": "Documents",
 
     "kpi.eyebrow": "Why now", "kpi.h2": "What AI is already changing for SMBs.",
     "kpi.item1.label": "of a leader's time goes to admin tasks. We give it back.",
