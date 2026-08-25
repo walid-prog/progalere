@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wavora — Services professionnels pour PME au Québec</title>
-  <meta name="description" content="Wavora réunit comptabilité opérationnelle, automatisation, stratégie & marketing et formations pour les PME et travailleurs autonomes du Québec." />
+  <title>Wavora — Comptabilité, automatisation, stratégie & formations</title>
+  <meta name="description" content="Wavora réunit comptabilité opérationnelle, automatisation, stratégie & marketing et formations pour les PME, travailleurs autonomes et organisations." />
   <script>try{var t=localStorage.getItem('wavora-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 6 C7 22 9 27 12 27 C15 27 17.5 19 16 12 C18.5 19 21 27 24 27 C27 27 29 22 28 6' fill='none' stroke='%234f46e5' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 </head>
@@ -25,14 +25,12 @@
           </svg>
           <span class="brand__word">Wavora</span>
         </a>
-
         <ul class="nav__links">
           <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
           <li><a href="services.html" data-i18n="nav.services">Services</a></li>
           <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
           <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
         </ul>
-
         <div class="nav__right">
           <button class="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Thème clair / sombre">
             <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
@@ -56,94 +54,118 @@
     <section class="hero">
       <div class="container hero__grid">
         <div>
-          <span class="eyebrow">Québec · PME · Travailleurs autonomes</span>
+          <span class="eyebrow">PME · Travailleurs autonomes · Organisations</span>
           <h1>Vos opérations, <em>plus claires</em> et plus modernes.</h1>
           <p class="hero__promise">Comptabilité, automatisation, stratégie et formations — réunies sous un même toit.</p>
           <div class="hero__cta">
             <a class="btn btn--primary btn--lg" href="reservation.html" data-i18n="cta.book">Réserver une consultation</a>
             <a class="btn btn--ghost btn--lg" href="services.html" data-i18n="cta.services">Voir les services</a>
           </div>
-          <p class="hero__credit">Fondée par un ancien du cabinet d'audit <strong>RCGT</strong>, en voie de certification <strong>CPA</strong>.</p>
+          <p class="hero__credit">Fondé par un duo complémentaire&nbsp;: <strong>la finance et la marque</strong>, réunies sous un même toit.</p>
         </div>
 
         <div class="hero__art" aria-hidden="true">
           <svg viewBox="0 0 520 470" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <linearGradient id="heroW" x1="60" y1="300" x2="470" y2="60" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#a855f7"/></linearGradient>
-              <linearGradient id="heroWave" x1="0" y1="0" x2="520" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5a4"/></linearGradient>
+              <linearGradient id="hLine" x1="100" y1="0" x2="440" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset="1" stop-color="#14c9a0"/></linearGradient>
+              <linearGradient id="hArea" x1="0" y1="150" x2="0" y2="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4" stop-opacity=".28"/><stop offset="1" stop-color="#0ea5a4" stop-opacity="0"/></linearGradient>
+              <linearGradient id="hWave" x1="0" y1="0" x2="520" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5a4"/></linearGradient>
             </defs>
-            <circle cx="370" cy="120" r="150" fill="var(--c-auto-soft)"/>
-            <circle cx="140" cy="330" r="118" fill="var(--c-compta-soft)"/>
 
-            <!-- Grande signature W (logo intégré) -->
-            <path class="wmark__path" d="M70 70 C96 250 122 320 158 320 C200 320 232 210 260 110 C288 210 320 320 362 320 C398 320 424 250 450 70"
-                  stroke="url(#heroW)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" style="stroke-dasharray:1400;stroke-dashoffset:1400;animation:wdraw 1.8s var(--ease) .2s forwards" opacity=".9"/>
+            <circle cx="390" cy="110" r="140" fill="var(--c-auto-soft)"/>
+            <circle cx="110" cy="350" r="108" fill="var(--c-compta-soft)"/>
 
-            <!-- Vagues -->
-            <path d="M30 360 Q150 300 270 360 T510 360" stroke="url(#heroWave)" stroke-width="7" fill="none" stroke-linecap="round" opacity=".7"/>
-            <path d="M30 392 Q150 332 270 392 T510 392" stroke="#f97316" stroke-width="5" fill="none" stroke-linecap="round" opacity=".7"/>
-
-            <!-- Carte tableau de bord -->
-            <g class="floaty">
-              <rect x="170" y="150" width="220" height="150" rx="18" fill="var(--surface)" stroke="var(--line)"/>
-              <rect x="192" y="176" width="78" height="10" rx="5" fill="var(--ink)"/>
-              <rect x="192" y="198" width="150" height="7" rx="3.5" fill="var(--line)"/>
-              <rect x="192" y="248" width="40" height="30" rx="7" fill="#0ea5a4"/>
-              <rect x="240" y="238" width="40" height="40" rx="7" fill="#4f46e5"/>
-              <rect x="288" y="256" width="40" height="22" rx="7" fill="#a855f7"/>
-              <rect x="336" y="230" width="34" height="48" rx="7" fill="#f97316"/>
+            <!-- vagues -->
+            <g opacity=".7">
+              <path class="h-wave" d="M20 410 Q140 360 260 410 T520 410" stroke="url(#hWave)" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <path class="h-wave--2" d="M20 436 Q140 386 260 436 T520 436" stroke="#f9713b" stroke-width="4" fill="none" stroke-linecap="round" opacity=".7"/>
             </g>
-            <!-- pastille % -->
-            <g class="floaty floaty--2">
-              <circle cx="410" cy="230" r="34" fill="var(--surface)" stroke="var(--line)"/>
-              <path d="M410 202 A28 28 0 1 1 388 214" stroke="#0ea5a4" stroke-width="6" fill="none" stroke-linecap="round"/>
-              <text x="410" y="236" text-anchor="middle" font-family="Inter, sans-serif" font-weight="700" font-size="16" fill="var(--ink)">82%</text>
+
+            <!-- carte graphique -->
+            <g class="floaty">
+              <rect x="78" y="118" width="384" height="256" rx="22" fill="var(--surface)" stroke="var(--line)"/>
+              <!-- en-tête -->
+              <text x="100" y="150" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" letter-spacing="1.2" fill="var(--muted)">FLUX OPÉRATIONNEL</text>
+              <rect x="356" y="136" width="86" height="22" rx="11" fill="var(--c-compta-soft)"/>
+              <circle cx="369" cy="147" r="4" fill="#0ea5a4"/>
+              <text x="379" y="151" font-family="Hanken Grotesk, sans-serif" font-weight="700" font-size="10.5" letter-spacing=".6" fill="#0ea5a4">OPTIMISÉ</text>
+
+              <!-- grille -->
+              <g stroke="var(--line)" stroke-width="1">
+                <line x1="100" y1="180" x2="440" y2="180"/><line x1="100" y1="225" x2="440" y2="225"/>
+                <line x1="100" y1="270" x2="440" y2="270"/><line x1="100" y1="315" x2="440" y2="315"/>
+                <line x1="186" y1="176" x2="186" y2="332"/><line x1="270" y1="176" x2="270" y2="332"/><line x1="356" y1="176" x2="356" y2="332"/>
+              </g>
+
+              <!-- ligne de référence (pointillés) -->
+              <path d="M105 316 C170 306 230 286 300 256 C360 230 402 198 436 176" stroke="var(--muted)" stroke-width="2.4" stroke-dasharray="6 7" fill="none" stroke-linecap="round" opacity=".5"/>
+
+              <!-- aire + courbe animées -->
+              <path class="h-area" d="M105 330 C170 318 200 298 232 294 C272 288 300 250 336 232 C372 214 406 176 436 158 L436 332 L105 332 Z" fill="url(#hArea)"/>
+              <path class="h-line" d="M105 330 C170 318 200 298 232 294 C272 288 300 250 336 232 C372 214 406 176 436 158" stroke="url(#hLine)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+
+              <!-- point final + pulsation -->
+              <circle class="h-pulse" cx="436" cy="158" r="9" fill="#0ea5a4"/>
+              <circle class="h-endpoint" cx="436" cy="158" r="6" fill="#0ea5a4" stroke="var(--surface)" stroke-width="3"/>
+
+              <!-- légende couleurs services -->
+              <circle cx="352" cy="356" r="5" fill="#0ea5a4"/><circle cx="372" cy="356" r="5" fill="#4f46e5"/><circle cx="392" cy="356" r="5" fill="#f9713b"/><circle cx="412" cy="356" r="5" fill="#a855f7"/>
             </g>
           </svg>
         </div>
       </div>
     </section>
 
-    <!-- APERÇU SERVICES -->
+    <!-- APERÇU SERVICES (liste éditoriale) -->
     <section class="section section--tint">
       <div class="container">
         <div class="section-head reveal">
           <span class="eyebrow">Nos services</span>
           <h2>Quatre expertises, un seul partenaire.</h2>
         </div>
-        <div class="svc-grid">
-          <a class="svc-card reveal" href="services.html#comptabilite" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
-            <span class="svc-card__num">01</span>
-            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h9l5 5v13"/><path d="M8 13h8M8 17h5M8 9h3"/></svg></div>
-            <h3>Comptabilité opérationnelle</h3><p>Vos chiffres à jour, sans friction.</p>
+        <nav class="svc-list reveal" aria-label="Services">
+          <a class="svc-item" href="services.html#comptabilite" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
+            <span class="svc-item__no">01</span>
+            <div class="svc-item__body"><h3>Comptabilité opérationnelle</h3><p>Vos chiffres à jour et lisibles, sans friction.</p></div>
+            <span class="svc-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h9l5 5v13"/><path d="M8 13h8M8 17h5M8 9h3"/></svg></span>
+            <span class="svc-item__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </a>
-          <a class="svc-card reveal" href="services.html#automatisation" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
-            <span class="svc-card__num">02</span>
-            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
-            <h3>Automatisation &amp; digitalisation</h3><p>Moins de tâches manuelles, plus d'impact.</p>
+          <a class="svc-item" href="services.html#automatisation" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
+            <span class="svc-item__no">02</span>
+            <div class="svc-item__body"><h3>Automatisation &amp; digitalisation</h3><p>Moins de tâches manuelles, plus d'impact.</p></div>
+            <span class="svc-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+            <span class="svc-item__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </a>
-          <a class="svc-card reveal" href="services.html#strategie" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
-            <span class="svc-card__num">03</span>
-            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="m12 12 7-7M15 5h4v4"/></svg></div>
-            <h3>Stratégie &amp; marketing</h3><p>Une direction claire, des résultats mesurables.</p>
+          <a class="svc-item" href="services.html#strategie" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
+            <span class="svc-item__no">03</span>
+            <div class="svc-item__body"><h3>Stratégie &amp; marketing</h3><p>Une direction claire, des résultats mesurables.</p></div>
+            <span class="svc-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3.5"/><path d="m12 12 7-7M15 5h4v4"/></svg></span>
+            <span class="svc-item__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </a>
-          <a class="svc-card reveal" href="services.html#formations" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
-            <span class="svc-card__num">04</span>
-            <div class="svc-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5"/></svg></div>
-            <h3>Formations</h3><p>Des équipes autonomes et outillées.</p>
+          <a class="svc-item" href="services.html#formations" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
+            <span class="svc-item__no">04</span>
+            <div class="svc-item__body"><h3>Formations professionnelles</h3><p>Des équipes autonomes et outillées.</p></div>
+            <span class="svc-item__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4 2 9l10 5 10-5z"/><path d="M6 11v5c0 1.1 2.7 2.5 6 2.5s6-1.4 6-2.5v-5"/></svg></span>
+            <span class="svc-item__arrow"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
           </a>
-        </div>
+        </nav>
       </div>
     </section>
 
-    <!-- CRÉDIBILITÉ -->
+    <!-- CHIFFRES -->
     <section class="section">
       <div class="container">
-        <div class="stats">
-          <div class="stat reveal"><div class="stat__num" style="color:var(--c-auto)">RCGT</div><div class="stat__label">Parcours en cabinet d'audit</div></div>
-          <div class="stat reveal"><div class="stat__num" style="color:var(--c-compta)">CPA</div><div class="stat__label">Certification en cours</div></div>
-          <div class="stat reveal"><div class="stat__num" style="color:var(--c-strat)">4&nbsp;en&nbsp;1</div><div class="stat__label">Services sous un même toit</div></div>
+        <div class="section-head reveal" style="margin-bottom:32px">
+          <span class="eyebrow">Pourquoi maintenant</span>
+          <h2>Digitaliser, ce n'est pas une option.</h2>
         </div>
+        <div class="kpi">
+          <div class="kpi__item reveal" style="--accent:var(--c-compta)"><div class="kpi__num">40 %</div><div class="kpi__label">de temps gagné sur les tâches répétitives une fois automatisées.</div></div>
+          <div class="kpi__item reveal" style="--accent:var(--c-auto)"><div class="kpi__num">+15 %</div><div class="kpi__label">de productivité avec l'IA pleinement intégrée aux processus.</div></div>
+          <div class="kpi__item reveal" style="--accent:var(--c-strat)"><div class="kpi__num">30 %</div><div class="kpi__label">des heures de travail automatisables d'ici 2030.</div></div>
+          <div class="kpi__item reveal" style="--accent:var(--c-form)"><div class="kpi__num">1 duo</div><div class="kpi__label">un seul point de contact, du début à la fin.</div></div>
+        </div>
+        <p class="kpi__note reveal">Indicateurs de marché — le potentiel d'une organisation qui digitalise et intègre l'IA.</p>
       </div>
     </section>
 
@@ -168,7 +190,7 @@
             <svg class="wmark" viewBox="0 0 66 44" fill="none" aria-hidden="true" style="width:34px"><defs><linearGradient id="wgF" x1="0" y1="44" x2="66" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset=".55" stop-color="#6f6bf2"/><stop offset="1" stop-color="#b877f6"/></linearGradient></defs><path d="M7 9 C11 28 15 36 20 36 C25 36 29 25 33 14 C37 25 41 36 46 36 C51 36 55 28 59 9" stroke="url(#wgF)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span class="brand__word">Wavora</span>
           </a>
-          <p>Services professionnels pour PME, travailleurs autonomes et organisations au Québec.</p>
+          <p>Services professionnels pour les PME, travailleurs autonomes et organisations.</p>
         </div>
         <div class="footer__col"><h4>Navigation</h4><ul>
           <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
@@ -187,7 +209,7 @@
           <li><a href="mailto:bonjour@wavora.ca">bonjour@wavora.ca</a></li>
         </ul></div>
       </div>
-      <div class="footer__bottom"><span>© 2025 Wavora. Tous droits réservés.</span><span>Québec, Canada</span></div>
+      <div class="footer__bottom"><span>© 2025 Wavora. Tous droits réservés.</span><span>Canada</span></div>
     </div>
   </footer>
 
