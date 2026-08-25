@@ -80,16 +80,21 @@
               <rect x="34" y="27" width="272" height="196" rx="18" class="ln" fill="none" stroke-width="2"/>
               <!-- chrome -->
               <circle cx="54" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="66" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="78" cy="50" r="3" fill="currentColor" opacity=".35"/>
-              <rect x="232" y="41" width="58" height="20" rx="10" fill="currentColor" opacity=".14"/>
-              <path d="M247 55l4-7 4 7z" fill="currentColor"/>
-              <text x="269" y="55" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="11" fill="currentColor">+18%</text>
+              <circle cx="272" cy="50" r="11" fill="currentColor" opacity=".14"/>
+              <path d="M266 50l4 4 7-8" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
               <line x1="54" y1="72" x2="286" y2="72" class="ln" stroke-width="2"/>
-              <!-- graphique -->
-              <g class="ln" stroke-width="1"><line x1="54" y1="108" x2="286" y2="108"/><line x1="54" y1="144" x2="286" y2="144"/><line x1="54" y1="180" x2="286" y2="180"/></g>
-              <path d="M54 194 L112 176 L170 186 L228 142 L286 104 V205 H54 Z" fill="currentColor" opacity=".12"/>
-              <polyline points="54,194 112,176 170,186 228,142 286,104" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="112" cy="176" r="4" fill="currentColor" opacity=".7"/><circle cx="170" cy="186" r="4" fill="currentColor" opacity=".7"/><circle cx="228" cy="142" r="4" fill="currentColor" opacity=".7"/>
-              <circle cx="286" cy="104" r="6" fill="currentColor"/>
+              <!-- liste de factures -->
+              <circle cx="64" cy="100" r="5" fill="currentColor"/>
+              <rect x="80" y="96" width="100" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="104" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor">1 240 $</text>
+              <line x1="54" y1="119" x2="286" y2="119" class="ln" stroke-width="1"/>
+              <circle cx="64" cy="138" r="5" fill="currentColor"/>
+              <rect x="80" y="134" width="80" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="142" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor">860 $</text>
+              <line x1="54" y1="157" x2="286" y2="157" class="ln" stroke-width="1"/>
+              <circle cx="64" cy="176" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
+              <rect x="80" y="172" width="112" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="180" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor" opacity=".7">2 010 $</text>
             </svg>
           </div>
         </article>
@@ -98,26 +103,26 @@
         <article class="service-row reverse reveal" id="automatisation" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
           <div class="service-row__media">
             <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-auto)" aria-hidden="true">
-              <!-- cadre principal -->
-              <rect class="card" x="45" y="40" width="210" height="170" rx="18"/><rect x="45" y="40" width="210" height="170" rx="18" class="ln" fill="none" stroke-width="2"/>
-              <circle cx="63" cy="58" r="4" fill="currentColor" opacity=".5"/><circle cx="77" cy="58" r="4" fill="currentColor" opacity=".5"/><circle cx="91" cy="58" r="4" fill="currentColor" opacity=".5"/>
-              <rect x="189" y="49" width="56" height="18" rx="9" fill="currentColor" opacity=".18"/>
-              <text x="217" y="62" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="10.5" fill="currentColor">-40%</text>
-              <!-- éclair central -->
-              <circle cx="150" cy="138" r="34" fill="currentColor" opacity=".16"/>
-              <circle cx="150" cy="138" r="34" fill="none" stroke="currentColor" stroke-width="2" opacity=".4"/>
-              <path d="M13 2 4 14h7l-1 8 9-12h-7z" fill="currentColor" transform="translate(129.3 116.4) scale(1.8)"/>
-              <!-- progression -->
-              <rect x="95" y="184" width="110" height="7" rx="3.5" fill="currentColor" opacity=".22"/>
-              <rect x="95" y="184" width="70" height="7" rx="3.5" fill="currentColor"/>
-              <circle cx="107" cy="199" r="2.6" fill="currentColor" opacity=".65"/><circle cx="127" cy="199" r="2.6" fill="currentColor" opacity=".65"/><circle cx="147" cy="199" r="2.6" fill="currentColor" opacity=".4"/><circle cx="167" cy="199" r="2.6" fill="currentColor" opacity=".25"/><circle cx="187" cy="199" r="2.6" fill="currentColor" opacity=".25"/>
-              <!-- badge intégrations flottant -->
-              <g class="floaty">
-                <rect x="250" y="40" width="58" height="46" rx="14" class="card"/><rect x="250" y="40" width="58" height="46" rx="14" class="ln" fill="none" stroke-width="2"/>
-                <rect x="259" y="55" width="15" height="15" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                <rect x="284" y="55" width="15" height="15" rx="5" fill="none" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M274 62.5h10" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
-              </g>
+              <!-- carte -->
+              <rect class="card" x="34" y="27" width="272" height="196" rx="18"/>
+              <rect x="34" y="27" width="272" height="196" rx="18" class="ln" fill="none" stroke-width="2"/>
+              <!-- chrome -->
+              <circle cx="54" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="66" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="78" cy="50" r="3" fill="currentColor" opacity=".35"/>
+              <rect x="228" y="41" width="58" height="20" rx="10" fill="currentColor" opacity=".14"/>
+              <text x="257" y="55" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="11" fill="currentColor">-40%</text>
+              <line x1="54" y1="72" x2="286" y2="72" class="ln" stroke-width="2"/>
+              <!-- flux -->
+              <circle cx="95" cy="146" r="17" fill="currentColor" opacity=".14"/>
+              <circle cx="95" cy="146" r="17" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M88 146l5 5 9-10" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <line x1="112" y1="146" x2="153" y2="146" class="ln" stroke-width="2"/>
+              <circle cx="170" cy="146" r="17" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="5 5"/>
+              <circle cx="170" cy="146" r="4" fill="currentColor"/>
+              <line x1="187" y1="146" x2="228" y2="146" class="ln" stroke-width="2"/>
+              <circle cx="245" cy="146" r="17" fill="none" stroke="currentColor" stroke-width="2" opacity=".35"/>
+              <rect x="80" y="172" width="30" height="6" rx="3" fill="currentColor" opacity=".18"/>
+              <rect x="155" y="172" width="30" height="6" rx="3" fill="currentColor" opacity=".18"/>
+              <rect x="230" y="172" width="30" height="6" rx="3" fill="currentColor" opacity=".18"/>
             </svg>
           </div>
           <div>
@@ -138,40 +143,27 @@
           </div>
           <div class="service-row__media">
             <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-strat)" aria-hidden="true">
-              <!-- carte performance -->
-              <rect class="card" x="26" y="46" width="208" height="164" rx="18"/><rect x="26" y="46" width="208" height="164" rx="18" class="ln" fill="none" stroke-width="2"/>
-              <circle cx="46" cy="64" r="4" fill="currentColor" opacity=".4"/><circle cx="60" cy="64" r="4" fill="currentColor" opacity=".4"/><circle cx="74" cy="64" r="4" fill="currentColor" opacity=".4"/>
-              <line x1="46" y1="80" x2="218" y2="80" class="ln" stroke-width="2"/>
-              <!-- badge de croissance -->
-              <rect x="150" y="54" width="64" height="20" rx="10" fill="currentColor" opacity=".16"/>
-              <path d="M164 68l4-7 4 7z" fill="currentColor"/>
-              <text x="196" y="68" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="11" fill="currentColor">+68%</text>
-              <!-- grille de repère -->
-              <g class="ln" stroke-width="1"><line x1="46" y1="112" x2="218" y2="112"/><line x1="46" y1="136" x2="218" y2="136"/><line x1="46" y1="160" x2="218" y2="160"/><line x1="46" y1="184" x2="218" y2="184"/></g>
-              <path d="M46 178 C90 168 140 150 218 118" stroke="var(--muted)" stroke-width="2" stroke-dasharray="5 6" fill="none" stroke-linecap="round" opacity=".45"/>
-              <!-- courbe de croissance -->
-              <path d="M46 190 L82 176 L116 182 L150 150 L182 128 L218 100 V190 Z" fill="currentColor" opacity=".12"/>
-              <polyline points="46,190 82,176 116,182 150,150 182,128 218,100" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-              <circle cx="82" cy="176" r="4" fill="currentColor" opacity=".7"/><circle cx="116" cy="182" r="4" fill="currentColor" opacity=".7"/><circle cx="150" cy="150" r="4" fill="currentColor" opacity=".7"/><circle cx="182" cy="128" r="4" fill="currentColor" opacity=".7"/>
-              <circle cx="218" cy="100" r="10" fill="none" stroke="currentColor" stroke-width="2" opacity=".5"/><circle cx="218" cy="100" r="6" fill="currentColor"/>
-              <!-- cible flottante -->
-              <g class="floaty">
-                <circle cx="256" cy="168" r="40" class="card"/><circle cx="256" cy="168" r="40" fill="currentColor" opacity=".1"/><circle cx="256" cy="168" r="40" class="ln" fill="none" stroke-width="2"/>
-                <circle cx="256" cy="168" r="26" fill="none" stroke="currentColor" stroke-width="3" opacity=".45"/>
-                <circle cx="256" cy="168" r="13" fill="none" stroke="currentColor" stroke-width="3"/>
-                <circle cx="256" cy="168" r="5" fill="currentColor"/>
-                <path d="M256 168 L294 126" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-                <circle cx="294" cy="126" r="5" fill="currentColor"/>
-                <circle cx="294" cy="126" r="9" fill="none" stroke="currentColor" stroke-width="2" opacity=".4"/>
-              </g>
-              <!-- porte-voix flottant -->
-              <g class="floaty floaty--2">
-                <rect x="14" y="176" width="68" height="56" rx="15" class="card"/><rect x="14" y="176" width="68" height="56" rx="15" class="ln" fill="none" stroke-width="2"/>
-                <rect x="30" y="196" width="7" height="14" rx="2" fill="currentColor"/>
-                <path d="M37 190 L58 178 L58 220 L37 208 Z" fill="currentColor"/>
-                <path d="M62 186 Q70 199 62 212" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/>
-                <path d="M67 181 Q78 199 67 217" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" opacity=".5"/>
-              </g>
+              <!-- carte -->
+              <rect class="card" x="34" y="27" width="272" height="196" rx="18"/>
+              <rect x="34" y="27" width="272" height="196" rx="18" class="ln" fill="none" stroke-width="2"/>
+              <!-- chrome -->
+              <circle cx="54" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="66" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="78" cy="50" r="3" fill="currentColor" opacity=".35"/>
+              <rect x="228" y="41" width="58" height="20" rx="10" fill="currentColor" opacity=".14"/>
+              <path d="M243 55l4-7 4 7z" fill="currentColor"/>
+              <text x="265" y="55" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="11" fill="currentColor">+68%</text>
+              <line x1="54" y1="72" x2="286" y2="72" class="ln" stroke-width="2"/>
+              <!-- indicateurs -->
+              <rect x="54" y="94" width="10" height="10" rx="3" fill="currentColor"/>
+              <rect x="80" y="96" width="90" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="104" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor">12,4k</text>
+              <line x1="54" y1="119" x2="286" y2="119" class="ln" stroke-width="1"/>
+              <rect x="54" y="132" width="10" height="10" rx="3" fill="currentColor" opacity=".65"/>
+              <rect x="80" y="134" width="70" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="142" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor">3,2k</text>
+              <line x1="54" y1="157" x2="286" y2="157" class="ln" stroke-width="1"/>
+              <rect x="54" y="170" width="10" height="10" rx="3" fill="currentColor" opacity=".35"/>
+              <rect x="80" y="172" width="60" height="8" rx="4" fill="currentColor" opacity=".18"/>
+              <text x="286" y="180" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="13" fill="currentColor" opacity=".7">482</text>
             </svg>
           </div>
         </article>
@@ -180,25 +172,27 @@
         <article class="service-row reverse reveal" id="formations" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
           <div class="service-row__media">
             <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-form)" aria-hidden="true">
-              <!-- écran de cours -->
-              <rect class="card" x="46" y="72" width="210" height="140" rx="16"/><rect x="46" y="72" width="210" height="140" rx="16" class="ln" fill="none" stroke-width="2"/>
-              <rect x="46" y="72" width="210" height="30" rx="16" fill="currentColor" opacity=".14"/>
-              <circle cx="64" cy="87" r="4" fill="currentColor" opacity=".5"/><circle cx="78" cy="87" r="4" fill="currentColor" opacity=".5"/><circle cx="92" cy="87" r="4" fill="currentColor" opacity=".5"/>
-              <rect x="190" y="80" width="56" height="18" rx="9" fill="currentColor" opacity=".18"/>
-              <text x="218" y="93" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="10.5" fill="currentColor">76%</text>
-              <circle cx="151" cy="150" r="30" fill="currentColor" opacity=".16"/>
-              <circle cx="151" cy="150" r="30" fill="none" stroke="currentColor" stroke-width="2" opacity=".4"/>
-              <path d="M143 138l20 12-20 12z" fill="currentColor"/>
-              <rect x="70" y="192" width="120" height="7" rx="3.5" fill="currentColor" opacity=".22"/>
-              <rect x="70" y="192" width="74" height="7" rx="3.5" fill="currentColor"/>
-              <circle cx="82" cy="207" r="2.6" fill="currentColor" opacity=".4"/><circle cx="108" cy="207" r="2.6" fill="currentColor" opacity=".4"/><circle cx="134" cy="207" r="2.6" fill="currentColor" opacity=".65"/><circle cx="160" cy="207" r="2.6" fill="currentColor" opacity=".25"/><circle cx="186" cy="207" r="2.6" fill="currentColor" opacity=".25"/>
-              <!-- chapeau de diplôme flottant -->
-              <g class="floaty">
-                <path d="M256 92l-42 18 42 18 42-18z" class="card"/><path d="M256 92l-42 18 42 18 42-18z" fill="currentColor" opacity=".2"/>
-                <path d="M256 92l-42 18 42 18 42-18z" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/>
-                <path d="M228 122v20c0 5 12.5 10 28 10s28-5 28-10v-20" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
-                <path d="M298 110v22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="298" cy="136" r="4" fill="currentColor"/>
-              </g>
+              <!-- carte -->
+              <rect class="card" x="34" y="27" width="272" height="196" rx="18"/>
+              <rect x="34" y="27" width="272" height="196" rx="18" class="ln" fill="none" stroke-width="2"/>
+              <!-- chrome -->
+              <circle cx="54" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="66" cy="50" r="3" fill="currentColor" opacity=".35"/><circle cx="78" cy="50" r="3" fill="currentColor" opacity=".35"/>
+              <rect x="228" y="41" width="58" height="20" rx="10" fill="currentColor" opacity=".14"/>
+              <text x="257" y="55" text-anchor="middle" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="11" fill="currentColor">94%</text>
+              <line x1="54" y1="72" x2="286" y2="72" class="ln" stroke-width="2"/>
+              <!-- modules -->
+              <rect x="54" y="92" width="80" height="7" rx="3.5" fill="currentColor" opacity=".2"/>
+              <text x="286" y="98" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="12" fill="currentColor">100%</text>
+              <rect x="54" y="105" width="232" height="5" rx="2.5" fill="currentColor" opacity=".15"/>
+              <rect x="54" y="105" width="232" height="5" rx="2.5" fill="currentColor"/>
+              <rect x="54" y="136" width="64" height="7" rx="3.5" fill="currentColor" opacity=".2"/>
+              <text x="286" y="142" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="12" fill="currentColor">68%</text>
+              <rect x="54" y="149" width="232" height="5" rx="2.5" fill="currentColor" opacity=".15"/>
+              <rect x="54" y="149" width="158" height="5" rx="2.5" fill="currentColor"/>
+              <rect x="54" y="180" width="90" height="7" rx="3.5" fill="currentColor" opacity=".2"/>
+              <text x="286" y="186" text-anchor="end" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="12" fill="currentColor" opacity=".7">24%</text>
+              <rect x="54" y="193" width="232" height="5" rx="2.5" fill="currentColor" opacity=".15"/>
+              <rect x="54" y="193" width="56" height="5" rx="2.5" fill="currentColor" opacity=".7"/>
             </svg>
           </div>
           <div>
