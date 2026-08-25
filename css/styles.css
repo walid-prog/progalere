@@ -147,16 +147,16 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 
 /* ---- Liste éditoriale des services (accueil) ---- */
 .svc-list { border-top: 1px solid var(--line); }
-.svc-item { display: grid; grid-template-columns: auto 1fr auto auto; align-items: center; gap: 24px; padding: 26px 20px; border-bottom: 1px solid var(--line); color: var(--ink); position: relative; transition: background .3s var(--ease), padding .3s var(--ease); }
+.svc-item { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 24px; padding: 24px 20px; border-bottom: 1px solid var(--line); color: var(--ink); position: relative; transition: background .3s var(--ease), padding .3s var(--ease); }
 .svc-item::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 0; background: var(--accent); transition: width .3s var(--ease); }
 .svc-item:hover { background: var(--accent-soft); padding-left: 30px; }
 .svc-item:hover::before { width: 4px; }
-.svc-item__no { font-family: var(--display); font-size: 1.55rem; font-weight: 700; color: var(--accent); min-width: 46px; }
+.svc-item__mark { flex: none; width: 56px; height: 56px; border-radius: 15px; display: grid; place-items: center; background: var(--accent-soft); color: var(--accent); transition: transform .3s var(--ease); }
+.svc-item__mark svg { width: 27px; height: 27px; }
+.svc-item:hover .svc-item__mark { transform: scale(1.06) rotate(-3deg); }
 .svc-item__body h3 { font-size: 1.4rem; margin-bottom: 3px; }
 .svc-item__body p { margin: 0; color: var(--muted); font-size: .96rem; }
-.svc-item__ico { width: 48px; height: 48px; border-radius: 13px; display: grid; place-items: center; background: var(--surface); border: 1px solid var(--line); color: var(--accent); }
-.svc-item__ico svg { width: 24px; height: 24px; }
-.svc-item__arrow { color: var(--accent); transition: transform .3s var(--ease); }
+.svc-item__arrow { color: var(--accent); transition: transform .3s var(--ease); display: grid; place-items: center; }
 .svc-item:hover .svc-item__arrow { transform: translateX(6px); }
 
 /* ---- KPI (chiffres accueil) ---- */
@@ -263,8 +263,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
   .values { grid-template-columns: 1fr; }
   .about-hero { grid-template-columns: 1fr; }
   .about-portrait { max-width: 360px; }
-  .svc-item { grid-template-columns: auto 1fr auto; gap: 16px; }
-  .svc-item__ico { display: none; }
+  .svc-item { gap: 16px; }
   .nav__links, .nav__right .lang { display: none; }
   .nav__toggle { display: inline-flex; }
   .nav.open .nav__links { display: flex; position: absolute; top: 74px; left: 0; right: 0; flex-direction: column; align-items: stretch; gap: 4px; background: var(--surface); border-bottom: 1px solid var(--line); padding: 14px 22px 20px; box-shadow: var(--shadow-sm); }
