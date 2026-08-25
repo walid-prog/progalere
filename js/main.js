@@ -54,12 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
     b.addEventListener("click", () => setLang(b.dataset.lang))
   );
 
-  // Interrupteur clair/sombre
+  // Interrupteur clair/sombre (corde qu'on tire)
   const themeBtn = document.querySelector(".theme-toggle");
   if (themeBtn) {
-    themeBtn.addEventListener("click", () =>
-      setTheme(currentTheme() === "dark" ? "light" : "dark")
-    );
+    themeBtn.addEventListener("click", () => {
+      setTheme(currentTheme() === "dark" ? "light" : "dark");
+      themeBtn.classList.remove("tugged");
+      void themeBtn.offsetWidth;
+      themeBtn.classList.add("tugged");
+    });
   }
 
   // Nav mobile

@@ -105,13 +105,31 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 .nav__links a.is-active { background: var(--paper-2); font-weight: 600; }
 .nav__right { display: flex; align-items: center; gap: 12px; }
 
-.theme-toggle { width: 40px; height: 40px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; display: grid; place-items: center; transition: background .2s, border-color .2s, transform .2s; }
-.theme-toggle:hover { transform: translateY(-2px); border-color: var(--muted); }
-.theme-toggle svg { width: 19px; height: 19px; }
-.theme-toggle .i-moon { display: none; }
-:root[data-theme="dark"] .theme-toggle .i-moon { display: block; }
-:root[data-theme="dark"] .theme-toggle .i-sun { display: none; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .theme-toggle .i-moon { display: block; } :root:not([data-theme="light"]) .theme-toggle .i-sun { display: none; } }
+/* Interrupteur "ampoule à corde" */
+.theme-toggle { width: 34px; height: 52px; border: 0; background: none; cursor: pointer; display: grid; place-items: center start; padding: 0; }
+.bulb { width: 30px; height: 46px; overflow: visible; }
+.bulb__glow { fill: #ffd97d; opacity: .5; filter: blur(3.5px); transition: opacity .4s var(--ease); }
+.bulb__glass { fill: #ffd97d; stroke: #e8a33d; stroke-width: 1.3; transition: fill .4s var(--ease), stroke .4s var(--ease); }
+.bulb__base { fill: var(--muted); opacity: .6; }
+.bulb__sun { stroke: #c97a1a; stroke-width: 1.3; stroke-linecap: round; opacity: 1; transition: opacity .3s var(--ease); }
+.bulb__moon { fill: #eef0ff; opacity: 0; transition: opacity .3s var(--ease); }
+.bulb__cord { stroke: var(--muted); stroke-width: 1.4; stroke-linecap: round; }
+.bulb__tab { fill: var(--surface); stroke: var(--muted); stroke-width: 1.4; }
+.bulb__pull { transform-box: fill-box; transform-origin: top center; transition: transform .15s var(--ease); }
+:root[data-theme="dark"] .bulb__glass { fill: #333c56; stroke: #4a5570; }
+:root[data-theme="dark"] .bulb__glow { opacity: 0; }
+:root[data-theme="dark"] .bulb__sun { opacity: 0; }
+:root[data-theme="dark"] .bulb__moon { opacity: 1; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .bulb__glass { fill: #333c56; stroke: #4a5570; }
+  :root:not([data-theme="light"]) .bulb__glow { opacity: 0; }
+  :root:not([data-theme="light"]) .bulb__sun { opacity: 0; }
+  :root:not([data-theme="light"]) .bulb__moon { opacity: 1; }
+}
+.theme-toggle:hover .bulb__pull { transform: translateY(2px); }
+.theme-toggle.tugged .bulb__pull { animation: tug .5s var(--ease); }
+@keyframes tug { 0% { transform: translateY(0); } 35% { transform: translateY(7px); } 60% { transform: translateY(2px); } 100% { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .theme-toggle.tugged .bulb__pull, .theme-toggle:hover .bulb__pull { animation: none; transform: none; } }
 
 .lang { display: inline-flex; border: 1px solid var(--line); border-radius: 999px; padding: 3px; background: var(--surface); }
 .lang button { border: 0; background: transparent; cursor: pointer; font: inherit; font-size: .82rem; font-weight: 600; color: var(--muted); padding: 5px 11px; border-radius: 999px; transition: all .2s; }
@@ -196,7 +214,9 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 .marquee:hover .marquee__track { animation-play-state: paused; }
 @keyframes marq { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .tool-card { display: inline-flex; align-items: center; gap: 13px; padding: 17px 28px; border-radius: 16px; background: var(--surface); border: 1px solid var(--line); box-shadow: var(--shadow-sm); font-weight: 600; font-size: 1.02rem; color: var(--ink); white-space: nowrap; }
-.tool-card__logo { width: 30px; height: 30px; flex: none; }
+.tool-card__logo { width: 28px; height: 28px; flex: none; }
+.canva-card { padding: 17px 30px; }
+.canva-word { font-family: "Pacifico", cursive; font-weight: 400; color: #00C4CC; font-size: 1.6rem; line-height: 1; }
 
 /* Bloc CTA */
 .cta-band { background: var(--ink-2); color: #fff; border-radius: 26px; padding: clamp(40px, 6vw, 66px); text-align: center; position: relative; overflow: hidden; }
