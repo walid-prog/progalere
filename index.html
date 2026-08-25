@@ -147,54 +147,59 @@
           <p class="lead" style="margin-inline:auto" data-i18n="platform.lead">Chaque service est personnalisé et peut être connecté à vos outils. L'IA optimise le travail répétitif, l'expertise humaine reste derrière chaque décision.</p>
         </div>
 
-        <div class="flow-card glass-card reveal">
-          <div class="flow">
-            <div class="flow__step">
-              <span class="flow__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h9l5 5v13"/><path d="M8 13h8M8 17h5M8 9h3"/></svg></span>
-              <div class="flow__content"><strong data-i18n="flow.doc.title">Nouveau document</strong><p data-i18n="flow.doc.desc">Une facture, un reçu, une donnée qui entre dans le système.</p></div>
-            </div>
-            <div class="flow__connector"></div>
-            <div class="flow__step" style="--accent-flow:var(--c-auto)">
-              <span class="flow__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
-              <div class="flow__content"><strong data-i18n="flow.ai.title">Analyse par l'IA</strong><p data-i18n="flow.ai.desc">Catégorisation, validation et priorisation automatiques.</p></div>
-            </div>
-            <div class="flow__split">
-              <div class="flow__branch" style="--accent-flow:var(--c-compta);--accent-flow-soft:var(--c-compta-soft)">
-                <span class="flow__tag" data-i18n="flow.tag1">Routine</span>
-                <div class="flow__step flow__step--compact">
-                  <span class="flow__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></span>
-                  <div class="flow__content"><strong data-i18n="flow.entry.title">Écriture comptable</strong><p data-i18n="flow.entry.desc">Classée et rapprochée sans intervention.</p></div>
-                </div>
-              </div>
-              <div class="flow__branch" style="--accent-flow:var(--c-strat);--accent-flow-soft:var(--c-strat-soft)">
-                <span class="flow__tag" data-i18n="flow.tag2">À valider</span>
-                <div class="flow__step flow__step--compact">
-                  <span class="flow__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 4a5 5 0 0 0-5 5v3.4c0 .6-.2 1.1-.6 1.5L5 15.5h14l-1.4-1.6c-.4-.4-.6-.9-.6-1.5V9a5 5 0 0 0-5-5Z"/><path d="M9.5 19a2.5 2.5 0 0 0 5 0"/></svg></span>
-                  <div class="flow__content"><strong data-i18n="flow.notif.title">Notification à l'équipe</strong><p data-i18n="flow.notif.desc">Un message clair, au bon moment.</p></div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="platform-preview glass-card reveal">
+          <svg viewBox="0 0 860 480" width="100%" fill="none" aria-hidden="true">
+            <defs><clipPath id="dashClip"><rect x="0" y="0" width="860" height="480" rx="20"/></clipPath></defs>
+            <rect x="0" y="0" width="860" height="480" rx="20" fill="var(--surface)" stroke="var(--line)"/>
+            <g clip-path="url(#dashClip)">
+              <!-- barre du haut -->
+              <circle cx="28" cy="24" r="4" fill="var(--line)"/><circle cx="44" cy="24" r="4" fill="var(--line)"/><circle cx="60" cy="24" r="4" fill="var(--line)"/>
+              <circle cx="822" cy="24" r="13" fill="var(--c-auto-soft)"/><circle cx="822" cy="24" r="5" fill="var(--c-auto)"/>
+              <line x1="0" y1="48" x2="860" y2="48" stroke="var(--line)" stroke-width="1.5"/>
+              <!-- barre latérale -->
+              <rect x="0" y="48" width="84" height="432" fill="var(--paper-2)"/>
+              <line x1="84" y1="48" x2="84" y2="480" stroke="var(--line)" stroke-width="1.5"/>
+              <rect x="14" y="80" width="56" height="44" rx="12" fill="var(--c-compta-soft)"/>
+              <g stroke="var(--c-compta)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M32 91v22a2 2 0 0 0 2 2h16l6-6V91a2 2 0 0 0-2-2H34a2 2 0 0 0-2 2Z"/><path d="M37 102h12M37 108h8"/></g>
+              <g stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M27 165v5a1 1 0 0 0 1 1h3l6 5v-16l-6 4h-3a1 1 0 0 0-1 1Z" transform="translate(0 3)"/><path d="M46 166a5 5 0 0 1 0 9" transform="translate(0 3)"/></g>
+              <g stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="27" y="242" width="30" height="18" rx="3"/><path d="m27 245 15 10 15-10"/></g>
+              <g stroke="var(--muted)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M35 314h16a3 3 0 0 1 3 3v22a3 3 0 0 1-3 3H35a3 3 0 0 1-3-3v-22a3 3 0 0 1 3-3Z"/><path d="M51 314v8h8"/></g>
+              <!-- indicateurs -->
+              <rect x="104" y="72" width="228" height="68" rx="14" fill="var(--surface)" stroke="var(--line)"/>
+              <rect x="122" y="88" width="56" height="6" rx="3" fill="var(--line)"/>
+              <text x="122" y="120" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="22" fill="var(--c-compta)">36%</text>
+              <rect x="348" y="72" width="228" height="68" rx="14" fill="var(--surface)" stroke="var(--line)"/>
+              <rect x="366" y="88" width="56" height="6" rx="3" fill="var(--line)"/>
+              <text x="366" y="120" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="22" fill="var(--c-auto)">+25%</text>
+              <rect x="592" y="72" width="228" height="68" rx="14" fill="var(--surface)" stroke="var(--line)"/>
+              <rect x="610" y="88" width="56" height="6" rx="3" fill="var(--line)"/>
+              <text x="610" y="120" font-family="Bricolage Grotesque, sans-serif" font-weight="700" font-size="22" fill="var(--c-form)">-40%</text>
+              <!-- carte graphique -->
+              <rect x="104" y="156" width="456" height="300" rx="16" fill="var(--surface)" stroke="var(--line)"/>
+              <rect x="128" y="180" width="90" height="8" rx="4" fill="var(--line)"/>
+              <g stroke="var(--line)" stroke-width="1"><line x1="128" y1="230" x2="536" y2="230"/><line x1="128" y1="290" x2="536" y2="290"/><line x1="128" y1="350" x2="536" y2="350"/><line x1="128" y1="410" x2="536" y2="410"/></g>
+              <path d="M128 400 L200 360 L268 380 L336 300 L404 260 L472 220 L536 190 V430 H128 Z" fill="var(--c-strat)" opacity=".12"/>
+              <polyline points="128,400 200,360 268,380 336,300 404,260 472,220 536,190" stroke="var(--c-strat)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="536" cy="190" r="7" fill="var(--c-strat)"/>
+              <!-- carte activité -->
+              <rect x="576" y="156" width="180" height="300" rx="16" fill="var(--surface)" stroke="var(--line)"/>
+              <rect x="600" y="180" width="70" height="8" rx="4" fill="var(--line)"/>
+              <g><circle cx="608" cy="220" r="6" fill="var(--c-compta)"/><rect x="624" y="216" width="90" height="6" rx="3" fill="var(--line)"/><rect x="624" y="227" width="50" height="6" rx="3" fill="var(--line)" opacity=".6"/></g>
+              <line x1="600" y1="252" x2="732" y2="252" stroke="var(--line)" stroke-width="1"/>
+              <g><circle cx="608" cy="278" r="6" fill="var(--c-auto)"/><rect x="624" y="274" width="90" height="6" rx="3" fill="var(--line)"/><rect x="624" y="285" width="60" height="6" rx="3" fill="var(--line)" opacity=".6"/></g>
+              <line x1="600" y1="310" x2="732" y2="310" stroke="var(--line)" stroke-width="1"/>
+              <g><circle cx="608" cy="336" r="6" fill="var(--c-strat)"/><rect x="624" y="332" width="90" height="6" rx="3" fill="var(--line)"/><rect x="624" y="343" width="40" height="6" rx="3" fill="var(--line)" opacity=".6"/></g>
+              <line x1="600" y1="368" x2="732" y2="368" stroke="var(--line)" stroke-width="1"/>
+              <g><circle cx="608" cy="394" r="6" fill="var(--c-form)"/><rect x="624" y="390" width="90" height="6" rx="3" fill="var(--line)"/><rect x="624" y="401" width="55" height="6" rx="3" fill="var(--line)" opacity=".6"/></g>
+            </g>
+          </svg>
         </div>
 
-        <p class="modules__caption reveal" data-i18n="platform.modules.caption">Des modules classiques, connectés selon vos besoins</p>
-        <div class="modules">
-          <div class="module-chip glass-card reveal floaty" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
-            <span class="module-chip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V5a2 2 0 0 1 2-2h9l5 5v13"/><path d="M8 13h8M8 17h5M8 9h3"/></svg></span>
-            <span data-i18n="platform.module1">Factures</span>
-          </div>
-          <div class="module-chip glass-card reveal floaty--2" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
-            <span class="module-chip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10v4a1 1 0 0 0 1 1h2l5 4V5L6 9H4a1 1 0 0 0-1 1Z"/><path d="M16 8a4 4 0 0 1 0 8"/><path d="M19 5a8 8 0 0 1 0 14"/></svg></span>
-            <span data-i18n="platform.module2">Marketing</span>
-          </div>
-          <div class="module-chip glass-card reveal floaty" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
-            <span class="module-chip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
-            <span data-i18n="platform.module3">Courriels</span>
-          </div>
-          <div class="module-chip glass-card reveal floaty--2" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
-            <span class="module-chip__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/></svg></span>
-            <span data-i18n="platform.module4">Documents</span>
-          </div>
+        <div class="platform-modules reveal">
+          <span style="--accent:var(--c-compta)" data-i18n="platform.module1">Factures</span>
+          <span style="--accent:var(--c-strat)" data-i18n="platform.module2">Marketing</span>
+          <span style="--accent:var(--c-auto)" data-i18n="platform.module3">Courriels</span>
+          <span style="--accent:var(--c-form)" data-i18n="platform.module4">Documents</span>
         </div>
       </div>
     </section>
@@ -225,9 +230,27 @@
           <a class="btn btn--primary btn--lg" href="reservation.html" data-i18n="cta.book">Réserver une consultation</a>
           <svg class="cta-band__waves" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q150 10 300 60 T600 60 T900 60 T1200 60 V120 H0 Z" fill="rgba(255,255,255,.06)"/><path d="M0 80 Q150 30 300 80 T600 80 T900 80 T1200 80 V120 H0 Z" fill="rgba(255,255,255,.05)"/></svg>
           <svg class="cta-band__palms" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
-            <g><path d="M110.0 118.0 C107.5 107.8 111.7 101.0 106.6 92.5" stroke="rgba(8,20,18,.4)" stroke-width="2.21" fill="none" stroke-linecap="round"/><path d="M106.6 92.5 C93.0 89.1 84.5 94.2 77.7 99.3" stroke="rgba(8,20,18,.4)" stroke-width="1.87" fill="none" stroke-linecap="round"/><path d="M106.6 92.5 C98.9 78.9 97.2 71.2 92.1 66.2" stroke="rgba(8,20,18,.4)" stroke-width="1.87" fill="none" stroke-linecap="round"/><path d="M106.6 92.5 C109.1 76.3 112.5 69.5 110.8 62.8" stroke="rgba(8,20,18,.4)" stroke-width="1.87" fill="none" stroke-linecap="round"/><path d="M106.6 92.5 C117.6 80.6 122.8 74.7 130.4 71.2" stroke="rgba(8,20,18,.4)" stroke-width="1.87" fill="none" stroke-linecap="round"/><path d="M106.6 92.5 C121.0 90.0 127.8 95.0 135.5 98.5" stroke="rgba(8,20,18,.4)" stroke-width="1.87" fill="none" stroke-linecap="round"/></g>
-            <g><path d="M610.0 119.0 C606.5 105.2 612.3 96.0 605.4 84.5" stroke="rgba(8,20,18,.4)" stroke-width="2.99" fill="none" stroke-linecap="round"/><path d="M605.4 84.5 C587.0 79.9 575.5 86.8 566.3 93.7" stroke="rgba(8,20,18,.4)" stroke-width="2.53" fill="none" stroke-linecap="round"/><path d="M605.4 84.5 C595.0 66.1 592.8 55.8 585.9 48.9" stroke="rgba(8,20,18,.4)" stroke-width="2.53" fill="none" stroke-linecap="round"/><path d="M605.4 84.5 C608.9 62.7 613.4 53.5 611.1 44.2" stroke="rgba(8,20,18,.4)" stroke-width="2.53" fill="none" stroke-linecap="round"/><path d="M605.4 84.5 C620.4 68.4 627.2 60.4 637.6 55.8" stroke="rgba(8,20,18,.4)" stroke-width="2.53" fill="none" stroke-linecap="round"/><path d="M605.4 84.5 C624.9 81.0 634.1 88.0 644.5 92.5" stroke="rgba(8,20,18,.4)" stroke-width="2.53" fill="none" stroke-linecap="round"/></g>
-            <g><path d="M1080.0 117.0 C1077.8 108.0 1081.5 102.0 1077.0 94.5" stroke="rgba(8,20,18,.4)" stroke-width="1.95" fill="none" stroke-linecap="round"/><path d="M1077.0 94.5 C1065.0 91.5 1057.5 96.0 1051.5 100.5" stroke="rgba(8,20,18,.4)" stroke-width="1.65" fill="none" stroke-linecap="round"/><path d="M1077.0 94.5 C1070.2 82.5 1068.8 75.8 1064.2 71.2" stroke="rgba(8,20,18,.4)" stroke-width="1.65" fill="none" stroke-linecap="round"/><path d="M1077.0 94.5 C1079.2 80.2 1082.2 74.2 1080.8 68.2" stroke="rgba(8,20,18,.4)" stroke-width="1.65" fill="none" stroke-linecap="round"/><path d="M1077.0 94.5 C1086.8 84.0 1091.2 78.8 1098.0 75.8" stroke="rgba(8,20,18,.4)" stroke-width="1.65" fill="none" stroke-linecap="round"/><path d="M1077.0 94.5 C1089.8 92.2 1095.8 96.8 1102.5 99.8" stroke="rgba(8,20,18,.4)" stroke-width="1.65" fill="none" stroke-linecap="round"/></g>
+            <path d="M81.1 120.0 C78.8 92.1 88.3 73.5 77.0 61.7 L90.4 64.2 C93.3 75.4 92.2 94.0 97.8 120.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q67.1 46.5 52.7 55.0 Q65.2 66.2 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q76.6 39.7 59.9 38.4 Q63.6 54.7 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q87.1 42.9 76.6 34.1 Q71.4 46.8 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q94.2 47.4 89.6 34.4 Q78.7 42.7 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q101.7 55.8 106.3 39.7 Q89.6 40.1 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M82.6 58.0 Q99.5 67.1 112.5 56.5 Q98.5 47.3 82.6 58.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M588.2 120.0 C585.2 83.1 597.8 58.5 582.8 42.9 L600.5 46.2 C604.4 61.0 603.0 85.6 610.3 120.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q569.6 22.7 550.4 34.0 Q567.0 48.9 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q582.2 13.6 559.9 11.8 Q564.9 33.6 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q596.3 17.9 582.2 6.2 Q575.3 23.1 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q605.7 23.8 599.6 6.6 Q585.0 17.6 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q615.6 35.0 621.9 13.6 Q599.5 14.1 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M590.2 38.0 Q612.8 50.1 630.1 36.0 Q611.5 23.7 590.2 38.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1097.2 120.0 C1095.3 95.7 1103.5 79.5 1093.7 69.2 L1105.3 71.4 C1107.9 81.1 1106.9 97.3 1111.8 120.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1085.1 56.0 1072.6 63.4 Q1083.4 73.1 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1093.3 50.2 1078.9 49.0 Q1082.1 63.1 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1102.5 52.9 1093.3 45.3 Q1088.9 56.3 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1108.6 56.8 1104.6 45.6 Q1095.2 52.8 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1115.1 64.1 1119.1 50.1 Q1104.6 50.5 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
+            <path d="M1098.5 66.0 Q1113.2 73.9 1124.5 64.7 Q1112.4 56.7 1098.5 66.0 Z" fill="rgba(5,18,20,.6)"/>
           </svg>
           <p class="cta-band__tagline" data-i18n="cta.tagline">On vous amène, tranquillement, vers plus de temps libre.</p>
         </div>

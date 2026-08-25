@@ -27,11 +27,6 @@ const I18N = {
 
     "platform.eyebrow": "Notre approche", "platform.h2": "Des solutions sur mesure, propulsées par l'IA, guidées par des humains.",
     "platform.lead": "Chaque service est personnalisé et peut être connecté à vos outils. L'IA optimise le travail répétitif, l'expertise humaine reste derrière chaque décision.",
-    "flow.doc.title": "Nouveau document", "flow.doc.desc": "Une facture, un reçu, une donnée qui entre dans le système.",
-    "flow.ai.title": "Analyse par l'IA", "flow.ai.desc": "Catégorisation, validation et priorisation automatiques.",
-    "flow.tag1": "Routine", "flow.entry.title": "Écriture comptable", "flow.entry.desc": "Classée et rapprochée sans intervention.",
-    "flow.tag2": "À valider", "flow.notif.title": "Notification à l'équipe", "flow.notif.desc": "Un message clair, au bon moment.",
-    "platform.modules.caption": "Des modules classiques, connectés selon vos besoins",
     "platform.module1": "Factures", "platform.module2": "Marketing", "platform.module3": "Courriels", "platform.module4": "Documents",
 
     "kpi.eyebrow": "Pourquoi maintenant", "kpi.h2": "Ce que l'IA change déjà pour les PME.",
@@ -116,11 +111,6 @@ const I18N = {
 
     "platform.eyebrow": "Our approach", "platform.h2": "Custom solutions, powered by AI, guided by people.",
     "platform.lead": "Every service is personalized and can be connected to your tools. AI optimizes repetitive work, human expertise stays behind every decision.",
-    "flow.doc.title": "New document", "flow.doc.desc": "An invoice, a receipt, a piece of data entering the system.",
-    "flow.ai.title": "AI analysis", "flow.ai.desc": "Automatic categorization, validation, and prioritization.",
-    "flow.tag1": "Routine", "flow.entry.title": "Accounting entry", "flow.entry.desc": "Classified and reconciled with no manual work.",
-    "flow.tag2": "Needs review", "flow.notif.title": "Team notification", "flow.notif.desc": "A clear message, at the right moment.",
-    "platform.modules.caption": "Classic modules, connected to fit your needs",
     "platform.module1": "Invoices", "platform.module2": "Marketing", "platform.module3": "Emails", "platform.module4": "Documents",
 
     "kpi.eyebrow": "Why now", "kpi.h2": "What AI is already changing for SMBs.",
