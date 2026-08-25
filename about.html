@@ -8,7 +8,7 @@
   <script>try{var t=localStorage.getItem('wavora-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 6 C7 22 9 27 12 27 C15 27 17.5 19 16 12 C18.5 19 21 27 24 27 C27 27 29 22 28 6' fill='none' stroke='%234f46e5' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 </head>
@@ -32,18 +32,11 @@
           <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
         </ul>
         <div class="nav__right">
-          <button class="theme-toggle" id="themeToggle" aria-label="Tirer pour changer de theme" title="Tirer sur la corde pour changer de theme">
-            <svg class="bulb" viewBox="0 0 24 42" fill="none" aria-hidden="true">
-              <ellipse class="bulb__glow" cx="12" cy="10" rx="9" ry="9"/>
-              <circle class="bulb__glass" cx="12" cy="10" r="7"/>
-              <rect class="bulb__base" x="9.3" y="16.2" width="5.4" height="3.2" rx="1"/>
-              <path class="bulb__sun" d="M12 2.2 L12 4.3 M12 15.7 L12 17.8 M4.2 10 L6.3 10 M17.7 10 L19.8 10 M17.3 4.7 L15.8 6.2 M6.7 15.3 L8.2 13.8 M6.7 4.7 L8.2 6.2 M17.3 15.3 L15.8 13.8"/>
-              <path class="bulb__moon" d="M16.5 10.4A4.25 4.25 0 1 1 11.6 5.5a3.3 3.3 0 0 0 4.9 4.9z"/>
-              <g class="bulb__pull">
-                <line class="bulb__cord" x1="12" y1="19.6" x2="12" y2="30"/>
-                <ellipse class="bulb__tab" cx="12" cy="33.4" rx="3" ry="4.2"/>
-              </g>
-            </svg>
+          <button class="switch" id="themeToggle" role="switch" aria-checked="false" aria-label="Basculer le thème clair/sombre">
+            <span class="switch__knob">
+              <svg class="switch__sun" viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="#c97a1a" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M18.4 5.6 17 7M7 17l-1.4 1.4"/></svg>
+              <svg class="switch__moon" viewBox="0 0 24 24" width="13" height="13" fill="#c7cdf0" aria-hidden="true"><path d="M20.8 14.9A8.6 8.6 0 1 1 9.1 3.2a7 7 0 0 0 11.7 11.7Z"/></svg>
+            </span>
           </button>
           <div class="lang" role="group" aria-label="Sélecteur de langue">
             <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
@@ -63,9 +56,9 @@
       <div class="container">
         <div class="about-hero reveal">
           <div>
-            <span class="eyebrow">À propos</span>
-            <h1>Un duo, une même exigence de qualité.</h1>
-            <p>Wavora, c'est la rencontre de deux mondes&nbsp;: la <strong>finance</strong> et la <strong>marque</strong>. Un ancien auditeur passé au service direct des PME et une stratège issue du marketing. Cofondateurs, épaulés par une équipe de spécialistes.</p>
+            <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
+            <h1 data-i18n="about.h1">Un duo, une même exigence de qualité.</h1>
+            <p data-i18n="about.lead">Wavora, c'est la rencontre de deux mondes&nbsp;: la <strong>finance</strong> et la <strong>marque</strong>. Un ancien auditeur passé au service direct des PME et une stratège issue du marketing. Cofondateurs, épaulés par une équipe de spécialistes.</p>
           </div>
           <div class="about-portrait" aria-hidden="true">
             <svg viewBox="0 0 200 200" fill="none">
@@ -83,34 +76,34 @@
     <!-- FONDATEURS -->
     <section class="section section--tint">
       <div class="container">
-        <div class="section-head reveal"><span class="eyebrow">Qui sommes-nous</span><h2>La finance et la marque, sous un même toit.</h2></div>
+        <div class="section-head reveal"><span class="eyebrow" data-i18n="about.who.eyebrow">Qui sommes-nous</span><h2 data-i18n="about.who.h2">La finance et la marque, sous un même toit.</h2></div>
         <div class="founders">
           <article class="founder reveal" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
             <div class="founder__avatar">WB</div>
-            <span class="founder__role">Comptabilité &amp; automatisation</span>
-            <h3>Walid B.</h3>
-            <p>En voie d'être <strong>CPA</strong> et ancien auditeur en cabinet, il a accompagné des PME de secteurs variés (construction, commerce, services, santé, tech, OBNL, e-commerce…) en comptabilité comme en automatisation, une expertise forgée en freelance sur des mandats d'optimisation de processus. Tenue de livres, intégrations sur mesure, rigueur scientifique et goût d'expliquer chaque étape.</p>
+            <span class="founder__role" data-i18n="about.walid.role">Comptabilité &amp; automatisation</span>
+            <h3 data-i18n="about.walid.name">Walid B.</h3>
+            <p data-i18n="about.walid.desc">En voie d'être <strong>CPA</strong> et ancien auditeur en cabinet, il a accompagné des PME de secteurs variés (construction, commerce, services, santé, tech, OBNL, e-commerce…) en comptabilité comme en automatisation, une expertise forgée en freelance sur des mandats d'optimisation de processus. Tenue de livres, intégrations sur mesure, rigueur scientifique et goût d'expliquer chaque étape.</p>
             <div class="founder__chips"><span>QuickBooks</span><span>Sage 50</span><span>Excel</span><span>Power Automate</span><span>Make</span></div>
           </article>
           <article class="founder reveal" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
             <div class="founder__avatar">RB</div>
-            <span class="founder__role">Stratégie &amp; projets</span>
-            <h3>Rayane B.</h3>
-            <p>À la tête d'une agence marketing, elle a accompagné des dizaines d'entreprises&nbsp;: positionnement de marque, campagnes, contenu, publicité digitale, sites et CRM. Diplômée de <strong>HEC</strong> (gestion de projets &amp; marketing). Claire, structurée et orientée résultats.</p>
+            <span class="founder__role" data-i18n="about.rayane.role">Stratégie &amp; projets</span>
+            <h3 data-i18n="about.rayane.name">Rayane B.</h3>
+            <p data-i18n="about.rayane.desc">À la tête d'une agence marketing, elle a accompagné des dizaines d'entreprises&nbsp;: positionnement de marque, campagnes, contenu, publicité digitale, sites et CRM. Diplômée de <strong>HEC</strong> (gestion de projets &amp; marketing). Claire, structurée et orientée résultats.</p>
             <div class="founder__chips"><span>Positionnement</span><span>Campagnes</span><span>CRM</span><span>Contenu</span></div>
           </article>
         </div>
 
         <div class="founders" style="margin-top:20px">
           <article class="founder reveal" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
-            <span class="founder__role">Notre complémentarité</span>
-            <h3>Finance + marque.</h3>
-            <p>Des décisions appuyées sur les données, une exécution cohérente, et un seul duo de proximité pour avancer plus vite, sans jongler entre plusieurs prestataires.</p>
+            <span class="founder__role" data-i18n="about.combo.role">Notre complémentarité</span>
+            <h3 data-i18n="about.combo.title">Finance + marque.</h3>
+            <p data-i18n="about.combo.desc">Des décisions appuyées sur les données, une exécution cohérente, et un seul duo de proximité pour avancer plus vite, sans jongler entre plusieurs prestataires.</p>
           </article>
           <article class="founder reveal" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
-            <span class="founder__role">Notre réseau</span>
-            <h3>Une expertise élargie.</h3>
-            <p>Selon le besoin, nous collaborons avec des CPA, fiscalistes, informaticiens et développeurs partenaires. Vous gardez un point de contact unique chez Wavora, et des livrables documentés.</p>
+            <span class="founder__role" data-i18n="about.network.role">Notre réseau</span>
+            <h3 data-i18n="about.network.title">Une expertise élargie.</h3>
+            <p data-i18n="about.network.desc">Selon le besoin, nous collaborons avec des CPA, fiscalistes, informaticiens et développeurs partenaires. Vous gardez un point de contact unique chez Wavora, et des livrables documentés.</p>
           </article>
         </div>
       </div>
@@ -119,11 +112,11 @@
     <!-- APPROCHE -->
     <section class="section">
       <div class="container">
-        <div class="section-head reveal"><span class="eyebrow">L'approche</span><h2>Trois principes, appliqués partout.</h2></div>
+        <div class="section-head reveal"><span class="eyebrow" data-i18n="about.approach.eyebrow">L'approche</span><h2 data-i18n="about.approach.h2">Trois principes, appliqués partout.</h2></div>
         <div class="values">
-          <div class="value reveal"><div class="value__icon" style="color:var(--c-compta)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><h3>Clarté</h3><p>Des chiffres et des décisions que vous comprenez, sans jargon.</p></div>
-          <div class="value reveal"><div class="value__icon" style="color:var(--c-auto)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>Efficacité</h3><p>Moins de temps perdu, plus d'énergie sur ce qui fait avancer.</p></div>
-          <div class="value reveal"><div class="value__icon" style="color:var(--c-strat)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Solutions concrètes</h3><p>Des recommandations applicables dès demain, pas de théorie.</p></div>
+          <div class="value reveal"><div class="value__icon" style="color:var(--c-compta)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div><h3 data-i18n="about.value1.title">Clarté</h3><p data-i18n="about.value1.desc">Des chiffres et des décisions que vous comprenez, sans jargon.</p></div>
+          <div class="value reveal"><div class="value__icon" style="color:var(--c-auto)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3 data-i18n="about.value2.title">Efficacité</h3><p data-i18n="about.value2.desc">Moins de temps perdu, plus d'énergie sur ce qui fait avancer.</p></div>
+          <div class="value reveal"><div class="value__icon" style="color:var(--c-strat)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3 data-i18n="about.value3.title">Solutions concrètes</h3><p data-i18n="about.value3.desc">Des recommandations applicables dès demain, pas de théorie.</p></div>
         </div>
       </div>
     </section>
@@ -131,8 +124,8 @@
     <section class="section" style="padding-top:0">
       <div class="container">
         <div class="cta-band reveal">
-          <h2>Faisons connaissance.</h2>
-          <p>Le meilleur moyen de voir si nous sommes faits pour travailler ensemble&nbsp;: en parler.</p>
+          <h2 data-i18n="about.cta.title">Faisons connaissance.</h2>
+          <p data-i18n="about.cta.desc">Le meilleur moyen de voir si nous sommes faits pour travailler ensemble&nbsp;: en parler.</p>
           <a class="btn btn--primary btn--lg" href="reservation.html" data-i18n="cta.book">Réserver une consultation</a>
           <svg class="cta-band__waves" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q150 10 300 60 T600 60 T900 60 T1200 60 V120 H0 Z" fill="rgba(255,255,255,.06)"/><path d="M0 80 Q150 30 300 80 T600 80 T900 80 T1200 80 V120 H0 Z" fill="rgba(255,255,255,.05)"/></svg>
         </div>
@@ -148,26 +141,26 @@
             <svg class="wmark" viewBox="0 0 66 44" fill="none" aria-hidden="true" style="width:34px"><defs><linearGradient id="wgF" x1="0" y1="44" x2="66" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset=".55" stop-color="#6f6bf2"/><stop offset="1" stop-color="#b877f6"/></linearGradient></defs><path d="M7 9 C11 28 15 36 20 36 C25 36 29 25 33 14 C37 25 41 36 46 36 C51 36 55 28 59 9" stroke="url(#wgF)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
             <span class="brand__word">Wavora</span>
           </a>
-          <p>Services professionnels pour les PME, travailleurs autonomes et organisations.</p>
+          <p data-i18n="footer.tagline">Services professionnels pour les PME, travailleurs autonomes et organisations.</p>
         </div>
-        <div class="footer__col"><h4>Navigation</h4><ul>
+        <div class="footer__col"><h4 data-i18n="footer.navHeading">Navigation</h4><ul>
           <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
           <li><a href="services.html" data-i18n="nav.services">Services</a></li>
           <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
           <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
         </ul></div>
-        <div class="footer__col"><h4>Services</h4><ul>
+        <div class="footer__col"><h4 data-i18n="footer.servicesHeading">Services</h4><ul>
           <li><a href="services.html#comptabilite">Comptabilité opérationnelle</a></li>
           <li><a href="services.html#automatisation">Automatisation &amp; digitalisation</a></li>
           <li><a href="services.html#strategie">Stratégie &amp; marketing</a></li>
           <li><a href="services.html#formations">Formations</a></li>
         </ul></div>
-        <div class="footer__col"><h4>Contact</h4><ul>
-          <li><a href="reservation.html">Planifier une consultation</a></li>
+        <div class="footer__col"><h4 data-i18n="footer.contactHeading">Contact</h4><ul>
+          <li><a href="reservation.html" data-i18n="footer.bookLink">Planifier une consultation</a></li>
           <li><a href="mailto:bonjour@wavora.ca">bonjour@wavora.ca</a></li>
         </ul></div>
       </div>
-      <div class="footer__bottom"><span>© 2025 Wavora. Tous droits réservés.</span><span>Canada</span></div>
+      <div class="footer__bottom"><span data-i18n="footer.rights">© 2025 Wavora. Tous droits réservés.</span><span data-i18n="footer.country">Canada</span></div>
     </div>
   </footer>
 
