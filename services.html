@@ -5,11 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Services — Wavora</title>
   <meta name="description" content="Comptabilité opérationnelle, automatisation & digitalisation, stratégie & marketing et formations professionnelles pour les PME du Québec." />
+  <script>try{var t=localStorage.getItem('wavora-theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e1726'/%3E%3Cpath d='M6 20 Q11 12 16 20 T26 20' stroke='%230ea5a4' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 13 Q11 5 16 13 T26 13' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 6 C7 22 9 27 12 27 C15 27 17.5 19 16 12 C18.5 19 21 27 24 27 C27 27 29 22 28 6' fill='none' stroke='%234f46e5' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 </head>
 <body>
 
@@ -17,13 +18,12 @@
     <div class="container">
       <nav class="nav">
         <a class="brand" href="index.html" aria-label="Wavora — accueil">
-          <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-            <rect width="32" height="32" rx="9" fill="#0e1726"/>
-            <path d="M6 20 Q11 12 16 20 T26 20" stroke="url(#bg1)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
-            <path d="M6 13 Q11 5 16 13 T26 13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".9"/>
-            <defs><linearGradient id="bg1" x1="6" y1="0" x2="26" y2="0"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5a4"/></linearGradient></defs>
+          <svg class="wmark" viewBox="0 0 66 44" fill="none" aria-hidden="true">
+            <defs><linearGradient id="wgH" x1="0" y1="44" x2="66" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset=".55" stop-color="#4f46e5"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs>
+            <path class="wmark__path" d="M7 9 C11 28 15 36 20 36 C25 36 29 25 33 14 C37 25 41 36 46 36 C51 36 55 28 59 9" stroke="url(#wgH)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle class="wmark__drop" cx="33" cy="13" r="3.6" fill="url(#wgH)"/>
           </svg>
-          Wavora
+          <span class="brand__word">Wavora</span>
         </a>
         <ul class="nav__links">
           <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
@@ -32,6 +32,10 @@
           <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
         </ul>
         <div class="nav__right">
+          <button class="theme-toggle" aria-label="Basculer le thème clair/sombre" title="Thème clair / sombre">
+            <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4.4"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg>
+            <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A8.5 8.5 0 1 1 11.2 3a6.6 6.6 0 0 0 9.8 9.8z"/></svg>
+          </button>
           <div class="lang" role="group" aria-label="Sélecteur de langue">
             <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
             <button type="button" data-lang="en" aria-pressed="false">EN</button>
@@ -46,7 +50,6 @@
   </header>
 
   <main>
-    <!-- INTRO -->
     <section class="section" style="padding-bottom:24px">
       <div class="container">
         <div class="section-head reveal">
@@ -57,85 +60,147 @@
       </div>
     </section>
 
-    <!-- SERVICES -->
     <section class="section" style="padding-top:0">
       <div class="container">
 
         <!-- 01 Comptabilité -->
         <article class="service-row reveal" id="comptabilite" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
-          <div class="service-row__content">
+          <div>
             <span class="service-row__tag"><span class="dot"></span>01 — Comptabilité</span>
             <h2>Comptabilité opérationnelle</h2>
             <p>Vos chiffres tenus à jour et lisibles, pour décider sur des bases solides plutôt que sur des impressions.</p>
-            <ul class="service-row__points">
-              <li>Tenue de livres</li><li>Rapprochements</li><li>Rapports mensuels</li><li>Taxes &amp; conformité</li>
-            </ul>
+            <ul class="service-row__points"><li>Tenue de livres</li><li>Rapprochements</li><li>Rapports mensuels</li><li>Taxes &amp; conformité</li></ul>
           </div>
-          <div class="service-row__media" style="color:var(--c-compta)">
-            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="30" y="20" width="140" height="110" rx="12" fill="#fff"/>
-              <path d="M52 46h96M52 66h60"/>
-              <rect x="52" y="88" width="30" height="26" rx="5" fill="currentColor" stroke="none"/>
-              <rect x="92" y="96" width="30" height="18" rx="5" opacity=".45" fill="currentColor" stroke="none"/>
-              <rect x="132" y="80" width="30" height="34" rx="5" opacity=".75" fill="currentColor" stroke="none"/>
+          <div class="service-row__media">
+            <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-compta)" aria-hidden="true">
+              <rect class="card" x="34" y="42" width="232" height="168" rx="16"/>
+              <rect x="34" y="42" width="232" height="168" rx="16" class="ln" fill="none" stroke-width="2"/>
+              <rect x="56" y="66" width="86" height="12" rx="6" fill="currentColor"/>
+              <rect x="56" y="86" width="150" height="6" rx="3" class="ln" fill="none" stroke-width="6"/>
+              <line x1="56" y1="182" x2="244" y2="182" class="ln" stroke-width="2"/>
+              <rect x="70"  y="150" width="26" height="32" rx="5" fill="currentColor" opacity=".4"/>
+              <rect x="108" y="128" width="26" height="54" rx="5" fill="currentColor" opacity=".6"/>
+              <rect x="146" y="140" width="26" height="42" rx="5" fill="currentColor" opacity=".5"/>
+              <rect x="184" y="106" width="26" height="76" rx="5" fill="currentColor"/>
+              <polyline points="83,150 121,128 159,138 197,104" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="83" cy="150" r="4" fill="currentColor"/><circle cx="197" cy="104" r="4" fill="currentColor"/>
+              <!-- pièce / check flottante -->
+              <g class="floaty">
+                <circle cx="272" cy="70" r="30" class="card"/><circle cx="272" cy="70" r="30" fill="currentColor" opacity=".14"/>
+                <path d="M260 70l8 8 16-17" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <!-- reçu flottant -->
+              <g class="floaty floaty--2">
+                <rect x="40" y="176" width="58" height="52" rx="8" class="card"/><rect x="40" y="176" width="58" height="52" rx="8" class="ln" fill="none" stroke-width="2"/>
+                <text x="69" y="210" text-anchor="middle" font-family="Fraunces, serif" font-weight="600" font-size="22" fill="currentColor">$</text>
+              </g>
             </svg>
           </div>
         </article>
 
         <!-- 02 Automatisation -->
         <article class="service-row reverse reveal" id="automatisation" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
-          <div class="service-row__media" style="color:var(--c-auto)">
-            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="45" cy="45" r="13" fill="#fff"/><circle cx="155" cy="45" r="13" fill="#fff"/>
-              <circle cx="100" cy="105" r="13" fill="#fff"/>
-              <path d="M58 45h84M52 56 92 96M148 56 108 96"/>
-              <path d="M96 30l-8 12h10l-8 12" stroke-width="3.5"/>
+          <div class="service-row__media">
+            <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-auto)" aria-hidden="true">
+              <!-- liaisons -->
+              <path d="M92 132 H150" class="ln" stroke-width="2.5"/><path d="M190 132 H248" class="ln" stroke-width="2.5"/>
+              <path d="M170 90 V70 M170 174 V196" class="ln" stroke-width="2.5"/>
+              <circle cx="150" cy="132" r="3" fill="currentColor"/><circle cx="190" cy="132" r="3" fill="currentColor"/>
+              <!-- doc entrée -->
+              <g class="floaty--2">
+                <rect x="34" y="104" width="58" height="58" rx="12" class="card"/><rect x="34" y="104" width="58" height="58" rx="12" class="ln" fill="none" stroke-width="2"/>
+                <rect x="46" y="120" width="34" height="5" rx="2.5" fill="currentColor" opacity=".5"/><rect x="46" y="132" width="28" height="5" rx="2.5" fill="currentColor" opacity=".5"/><rect x="46" y="144" width="20" height="5" rx="2.5" fill="currentColor" opacity=".5"/>
+              </g>
+              <!-- engrenage central -->
+              <g class="floaty">
+                <circle cx="170" cy="132" r="40" class="card"/><circle cx="170" cy="132" r="40" fill="currentColor" opacity=".12"/>
+                <path d="M170 108v-9M170 165v9M146 132h-9M203 132h9M153 115l-6-6M193 155l6 6M187 115l6-6M147 155l-6 6" stroke="currentColor" stroke-width="4" stroke-linecap="round"/>
+                <circle cx="170" cy="132" r="15" fill="none" stroke="currentColor" stroke-width="4"/><circle cx="170" cy="132" r="5" fill="currentColor"/>
+              </g>
+              <!-- sortie validée -->
+              <g class="floaty--2">
+                <rect x="248" y="104" width="58" height="58" rx="12" class="card"/><rect x="248" y="104" width="58" height="58" rx="12" class="ln" fill="none" stroke-width="2"/>
+                <path d="M264 133l9 9 17-19" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+              <!-- éclair haut -->
+              <g class="floaty">
+                <circle cx="170" cy="52" r="20" class="card"/><circle cx="170" cy="52" r="20" fill="currentColor" opacity=".14"/>
+                <path d="M173 42l-8 12h7l-2 10 8-13h-7z" fill="currentColor"/>
+              </g>
+              <!-- base bas -->
+              <rect x="150" y="196" width="40" height="26" rx="7" class="card"/><rect x="150" y="196" width="40" height="26" rx="7" fill="currentColor" opacity=".16"/>
             </svg>
           </div>
-          <div class="service-row__content">
+          <div>
             <span class="service-row__tag"><span class="dot"></span>02 — Automatisation</span>
             <h2>Automatisation &amp; digitalisation</h2>
             <p>On élimine les tâches répétitives et on connecte vos outils, pour que votre temps aille là où il compte vraiment.</p>
-            <ul class="service-row__points">
-              <li>Flux automatisés</li><li>Intégrations</li><li>Tableaux de bord</li><li>IA appliquée</li>
-            </ul>
+            <ul class="service-row__points"><li>Flux automatisés</li><li>Intégrations</li><li>Tableaux de bord</li><li>IA appliquée</li></ul>
           </div>
         </article>
 
         <!-- 03 Stratégie -->
         <article class="service-row reveal" id="strategie" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
-          <div class="service-row__content">
+          <div>
             <span class="service-row__tag"><span class="dot"></span>03 — Stratégie</span>
             <h2>Stratégie &amp; marketing</h2>
             <p>Une direction claire et des actions concrètes pour attirer les bons clients et faire croître votre entreprise.</p>
-            <ul class="service-row__points">
-              <li>Positionnement</li><li>Image de marque</li><li>Acquisition</li><li>Contenu</li>
-            </ul>
+            <ul class="service-row__points"><li>Positionnement</li><li>Image de marque</li><li>Acquisition</li><li>Contenu</li></ul>
           </div>
-          <div class="service-row__media" style="color:var(--c-strat)">
-            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="100" cy="75" r="46" fill="#fff"/><circle cx="100" cy="75" r="26"/><circle cx="100" cy="75" r="7" fill="currentColor" stroke="none"/>
-              <path d="M100 75 150 25M132 25h18v18"/>
+          <div class="service-row__media">
+            <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-strat)" aria-hidden="true">
+              <!-- carte croissance -->
+              <rect class="card" x="34" y="70" width="200" height="150" rx="16"/><rect x="34" y="70" width="200" height="150" rx="16" class="ln" fill="none" stroke-width="2"/>
+              <polyline points="58,188 96,164 128,176 166,132 208,104" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M58 188 L96 164 L128 176 L166 132 L208 104 V196 H58 Z" fill="currentColor" opacity=".12"/>
+              <circle cx="208" cy="104" r="5" fill="currentColor"/>
+              <path d="M188 104h20v-20" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="58" y="92" width="60" height="9" rx="4.5" fill="currentColor" opacity=".55"/>
+              <!-- cible flottante -->
+              <g class="floaty">
+                <circle cx="252" cy="150" r="46" class="card"/>
+                <circle cx="252" cy="150" r="46" class="ln" fill="none" stroke-width="2"/>
+                <circle cx="252" cy="150" r="30" fill="none" stroke="currentColor" stroke-width="4" opacity=".5"/>
+                <circle cx="252" cy="150" r="15" fill="none" stroke="currentColor" stroke-width="4"/>
+                <circle cx="252" cy="150" r="6" fill="currentColor"/>
+                <path d="M252 150 L300 108 M286 108h12v12" stroke="currentColor" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
             </svg>
           </div>
         </article>
 
         <!-- 04 Formations -->
         <article class="service-row reverse reveal" id="formations" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
-          <div class="service-row__media" style="color:var(--c-form)">
-            <svg viewBox="0 0 200 150" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M100 38 40 66l60 28 60-28z" fill="#fff"/>
-              <path d="M62 80v26c0 6 17 14 38 14s38-8 38-14V80"/>
-              <path d="M160 66v34" />
+          <div class="service-row__media">
+            <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-form)" aria-hidden="true">
+              <!-- écran de cours -->
+              <rect class="card" x="46" y="72" width="210" height="140" rx="16"/><rect x="46" y="72" width="210" height="140" rx="16" class="ln" fill="none" stroke-width="2"/>
+              <rect x="46" y="72" width="210" height="30" rx="16" fill="currentColor" opacity=".14"/>
+              <circle cx="64" cy="87" r="4" fill="currentColor" opacity=".5"/><circle cx="78" cy="87" r="4" fill="currentColor" opacity=".5"/><circle cx="92" cy="87" r="4" fill="currentColor" opacity=".5"/>
+              <circle cx="151" cy="150" r="30" fill="currentColor" opacity=".16"/>
+              <path d="M143 138l20 12-20 12z" fill="currentColor"/>
+              <rect x="70" y="192" width="120" height="7" rx="3.5" fill="currentColor" opacity=".22"/>
+              <rect x="70" y="192" width="74" height="7" rx="3.5" fill="currentColor"/>
+              <!-- chapeau de diplôme flottant -->
+              <g class="floaty">
+                <path d="M256 92l-42 18 42 18 42-18z" class="card"/><path d="M256 92l-42 18 42 18 42-18z" fill="currentColor" opacity=".2"/>
+                <path d="M256 92l-42 18 42 18 42-18z" stroke="currentColor" stroke-width="3" fill="none" stroke-linejoin="round"/>
+                <path d="M228 122v20c0 5 12.5 10 28 10s28-5 28-10v-20" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M298 110v22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="298" cy="136" r="4" fill="currentColor"/>
+              </g>
+              <!-- livre flottant -->
+              <g class="floaty floaty--2">
+                <rect x="44" y="180" width="52" height="44" rx="8" class="card"/><rect x="44" y="180" width="52" height="44" rx="8" class="ln" fill="none" stroke-width="2"/>
+                <path d="M70 190v26" stroke="currentColor" stroke-width="2.5"/>
+                <rect x="54" y="197" width="12" height="4" rx="2" fill="currentColor" opacity=".5"/><rect x="74" y="197" width="12" height="4" rx="2" fill="currentColor" opacity=".5"/>
+              </g>
             </svg>
           </div>
-          <div class="service-row__content">
+          <div>
             <span class="service-row__tag"><span class="dot"></span>04 — Formations</span>
             <h2>Formations professionnelles</h2>
             <p>On outille vos équipes pour qu'elles deviennent autonomes sur leurs outils, leurs chiffres et leurs processus.</p>
-            <ul class="service-row__points">
-              <li>Comptabilité</li><li>Outils numériques</li><li>IA &amp; productivité</li><li>Sur mesure</li>
-            </ul>
+            <ul class="service-row__points"><li>Comptabilité</li><li>Outils numériques</li><li>IA &amp; productivité</li><li>Sur mesure</li></ul>
           </div>
         </article>
       </div>
@@ -151,15 +216,14 @@
         <div class="tools__logos reveal">
           <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2"><path d="M12 3v18M6 8l12 8M18 8 6 16" stroke-linecap="round"/></svg>Claude</span>
           <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#10a37f" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8M8 12h8" stroke-linecap="round"/></svg>ChatGPT</span>
-          <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#00dc82" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6" stroke-linecap="round"/></svg>Sage</span>
+          <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#00c176" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="4"/><path d="M9 12h6" stroke-linecap="round"/></svg>Sage</span>
           <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#2ca01c" stroke-width="2"><circle cx="12" cy="12" r="8"/><path d="M12 8v8" stroke-linecap="round"/></svg>QuickBooks</span>
           <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#217346" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m9 9 6 6M15 9l-6 6" stroke-linecap="round"/></svg>Excel</span>
-          <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#4f46e5" stroke-width="2"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 10h8M8 14h5" stroke-linecap="round"/></svg>Make</span>
+          <span class="tool-chip"><svg viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2"><rect x="4" y="6" width="16" height="12" rx="3"/><path d="M8 10h8M8 14h5" stroke-linecap="round"/></svg>Make</span>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
     <section class="section">
       <div class="container">
         <div class="cta-band reveal">
@@ -177,41 +241,29 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <a class="brand" href="index.html">
-            <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1b2436"/><path d="M6 20 Q11 12 16 20 T26 20" stroke="#0ea5a4" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M6 13 Q11 5 16 13 T26 13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
-            Wavora
+            <svg class="wmark" viewBox="0 0 66 44" fill="none" aria-hidden="true" style="width:34px"><defs><linearGradient id="wgF" x1="0" y1="44" x2="66" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#0ea5a4"/><stop offset=".55" stop-color="#6f6bf2"/><stop offset="1" stop-color="#b877f6"/></linearGradient></defs><path d="M7 9 C11 28 15 36 20 36 C25 36 29 25 33 14 C37 25 41 36 46 36 C51 36 55 28 59 9" stroke="url(#wgF)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="brand__word">Wavora</span>
           </a>
           <p>Services professionnels pour PME, travailleurs autonomes et organisations au Québec.</p>
         </div>
-        <div class="footer__col">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
-            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
-            <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
-            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Services</h4>
-          <ul>
-            <li><a href="services.html#comptabilite">Comptabilité opérationnelle</a></li>
-            <li><a href="services.html#automatisation">Automatisation &amp; digitalisation</a></li>
-            <li><a href="services.html#strategie">Stratégie &amp; marketing</a></li>
-            <li><a href="services.html#formations">Formations</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Contact</h4>
-          <ul>
-            <li><a href="reservation.html">Planifier une consultation</a></li>
-            <li><a href="mailto:bonjour@wavora.ca">bonjour@wavora.ca</a></li>
-          </ul>
-        </div>
+        <div class="footer__col"><h4>Navigation</h4><ul>
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Services</h4><ul>
+          <li><a href="services.html#comptabilite">Comptabilité opérationnelle</a></li>
+          <li><a href="services.html#automatisation">Automatisation &amp; digitalisation</a></li>
+          <li><a href="services.html#strategie">Stratégie &amp; marketing</a></li>
+          <li><a href="services.html#formations">Formations</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Contact</h4><ul>
+          <li><a href="reservation.html">Planifier une consultation</a></li>
+          <li><a href="mailto:bonjour@wavora.ca">bonjour@wavora.ca</a></li>
+        </ul></div>
       </div>
-      <div class="footer__bottom">
-        <span>© 2025 Wavora. Tous droits réservés.</span>
-        <span>Québec, Canada</span>
-      </div>
+      <div class="footer__bottom"><span>© 2025 Wavora. Tous droits réservés.</span><span>Québec, Canada</span></div>
     </div>
   </footer>
 
