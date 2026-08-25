@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>À propos — Wavora</title>
+  <meta name="description" content="L'histoire de Wavora : un ancien du cabinet d'audit RCGT, en voie de certification CPA, qui a voulu aider les entreprises plus concrètement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%230e1726'/%3E%3Cpath d='M6 20 Q11 12 16 20 T26 20' stroke='%230ea5a4' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3Cpath d='M6 13 Q11 5 16 13 T26 13' stroke='white' stroke-width='2.4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E" />
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Wavora — accueil">
+          <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="#0e1726"/>
+            <path d="M6 20 Q11 12 16 20 T26 20" stroke="url(#bg1)" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+            <path d="M6 13 Q11 5 16 13 T26 13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".9"/>
+            <defs><linearGradient id="bg1" x1="6" y1="0" x2="26" y2="0"><stop stop-color="#4f46e5"/><stop offset="1" stop-color="#0ea5a4"/></linearGradient></defs>
+          </svg>
+          Wavora
+        </a>
+        <ul class="nav__links">
+          <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+          <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+          <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
+          <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+        </ul>
+        <div class="nav__right">
+          <div class="lang" role="group" aria-label="Sélecteur de langue">
+            <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+          <a class="btn btn--primary" href="reservation.html" data-i18n="cta.bookShort">Réserver</a>
+          <button class="nav__toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO ABOUT -->
+    <section class="section">
+      <div class="container">
+        <div class="about-hero reveal">
+          <div>
+            <span class="eyebrow">À propos</span>
+            <h1>Un regard d'auditeur, une approche plus humaine.</h1>
+            <p>Wavora est née d'une conviction&nbsp;: les entreprises méritent un accompagnement plus concret, plus moderne et plus proche de leur réalité.</p>
+          </div>
+          <div class="about-portrait" aria-hidden="true">
+            <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="100" cy="78" r="40" fill="#fff"/>
+              <path d="M40 175c0-33 27-52 60-52s60 19 60 52z" fill="#fff"/>
+              <path d="M20 150 Q60 120 100 150 T180 150" stroke="#4f46e5" stroke-width="6" fill="none" stroke-linecap="round" opacity=".55"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HISTOIRE / TIMELINE -->
+    <section class="section section--tint">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Le parcours</span>
+          <h2>Du cabinet d'audit à l'accompagnement concret.</h2>
+        </div>
+        <div class="timeline">
+          <div class="tl-item reveal">
+            <div class="tl-item__year">Hier</div>
+            <div>
+              <h3 style="color:var(--c-auto)">Le cabinet d'audit — RCGT</h3>
+              <p>Plus d'un an au sein d'un grand cabinet, à examiner les chiffres de nombreuses entreprises. Une école rigoureuse — mais souvent trop distante du quotidien des dirigeants.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__year">Le déclic</div>
+            <div>
+              <h3 style="color:var(--c-strat)">Faire les choses autrement</h3>
+              <p>La volonté d'aider les entreprises plus concrètement&nbsp;: pas seulement constater, mais agir — de façon plus pratique, plus humaine et plus moderne que l'audit traditionnel.</p>
+            </div>
+          </div>
+          <div class="tl-item reveal">
+            <div class="tl-item__year">Aujourd'hui</div>
+            <div>
+              <h3 style="color:var(--c-compta)">Wavora — et la certification CPA en cours</h3>
+              <p>Un partenaire unique qui réunit comptabilité, automatisation, stratégie et formations, porté par une expertise en voie de certification CPA.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- APPROCHE / VALEURS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">L'approche</span>
+          <h2>Trois principes, appliqués partout.</h2>
+        </div>
+        <div class="values">
+          <div class="value reveal">
+            <div class="value__icon" style="color:var(--c-compta)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg></div>
+            <h3>Clarté</h3>
+            <p>Des chiffres et des décisions que vous comprenez, sans jargon.</p>
+          </div>
+          <div class="value reveal">
+            <div class="value__icon" style="color:var(--c-auto)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div>
+            <h3>Efficacité</h3>
+            <p>Moins de temps perdu, plus d'énergie sur ce qui fait avancer.</p>
+          </div>
+          <div class="value reveal">
+            <div class="value__icon" style="color:var(--c-strat)"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div>
+            <h3>Solutions concrètes</h3>
+            <p>Des recommandations applicables dès demain, pas de théorie.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section" style="padding-top:0">
+      <div class="container">
+        <div class="cta-band reveal">
+          <h2>Faisons connaissance.</h2>
+          <p>Le meilleur moyen de voir si nous sommes faits pour travailler ensemble&nbsp;: en parler.</p>
+          <a class="btn btn--primary btn--lg" href="reservation.html" data-i18n="cta.book">Réserver une consultation</a>
+          <svg class="cta-band__waves" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60 Q150 10 300 60 T600 60 T900 60 T1200 60 V120 H0 Z" fill="rgba(255,255,255,.06)"/><path d="M0 80 Q150 30 300 80 T600 80 T900 80 T1200 80 V120 H0 Z" fill="rgba(255,255,255,.05)"/></svg>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="index.html">
+            <svg class="brand__mark" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1b2436"/><path d="M6 20 Q11 12 16 20 T26 20" stroke="#0ea5a4" stroke-width="2.4" fill="none" stroke-linecap="round"/><path d="M6 13 Q11 5 16 13 T26 13" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round"/></svg>
+            Wavora
+          </a>
+          <p>Services professionnels pour PME, travailleurs autonomes et organisations au Québec.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Accueil</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="reservation.html" data-i18n="nav.booking">Réservation</a></li>
+            <li><a href="about.html" data-i18n="nav.about">À propos</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#comptabilite">Comptabilité opérationnelle</a></li>
+            <li><a href="services.html#automatisation">Automatisation &amp; digitalisation</a></li>
+            <li><a href="services.html#strategie">Stratégie &amp; marketing</a></li>
+            <li><a href="services.html#formations">Formations</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="reservation.html">Planifier une consultation</a></li>
+            <li><a href="mailto:bonjour@wavora.ca">bonjour@wavora.ca</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Wavora. Tous droits réservés.</span>
+        <span>Québec, Canada</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
