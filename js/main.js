@@ -80,11 +80,6 @@ const I18N = {
     "svc4.p1": "Comptabilité", "svc4.p2": "Outils numériques", "svc4.p3": "IA &amp; productivité",
     "svc4.p4": "En ligne", "svc4.p5": "En présentiel", "svc4.p6": "Sur mesure",
 
-    "illus.compta.step1": "Reçu", "illus.compta.step2": "Classé", "illus.compta.step3": "Rapproché",
-    "illus.auto.step1": "Déclencheur", "illus.auto.step2": "Traitement", "illus.auto.step3": "Résultat",
-    "illus.strat.step1": "Idée", "illus.strat.step2": "Création", "illus.strat.step3": "Diffusion",
-    "illus.form.step1": "Évaluation", "illus.form.step2": "Formation", "illus.form.step3": "Autonomie",
-
     "services.cta.title": "Un besoin précis en tête&nbsp;?", "services.cta.desc": "Parlons-en. On identifie ensemble le service, seul ou combiné, qui vous convient.",
 
     "booking.eyebrow": "Réservation", "booking.h1": "Planifions une consultation.",
@@ -187,11 +182,6 @@ const I18N = {
     "svc4.desc": "Online or in person, we equip your teams to become autonomous with their tools, numbers, and processes.",
     "svc4.p1": "Accounting", "svc4.p2": "Digital tools", "svc4.p3": "AI &amp; productivity",
     "svc4.p4": "Online", "svc4.p5": "In person", "svc4.p6": "Custom-built",
-
-    "illus.compta.step1": "Received", "illus.compta.step2": "Classified", "illus.compta.step3": "Reconciled",
-    "illus.auto.step1": "Trigger", "illus.auto.step2": "Processing", "illus.auto.step3": "Result",
-    "illus.strat.step1": "Idea", "illus.strat.step2": "Creation", "illus.strat.step3": "Distribution",
-    "illus.form.step1": "Assessment", "illus.form.step2": "Training", "illus.form.step3": "Autonomy",
 
     "services.cta.title": "Got something specific in mind&nbsp;?", "services.cta.desc": "Let's talk. Together we'll identify the service, or combination, that fits.",
 
