@@ -125,6 +125,22 @@ const I18N = {
     "privacy.rights.body": "Vous pouvez en tout temps demander l'accès aux renseignements que nous détenons à votre sujet, en demander la rectification, ou retirer votre consentement à leur collecte, en écrivant à <a href=\"mailto:bonjour@wavora.ca\">bonjour@wavora.ca</a>.",
     "privacy.complaint.h2": "Plainte",
     "privacy.complaint.body": "Si vous estimez que vos droits n'ont pas été respectés, vous pouvez déposer une plainte auprès de la Commission d'accès à l'information du Québec (<a href=\"https://www.cai.gouv.qc.ca\" target=\"_blank\" rel=\"noopener\">cai.gouv.qc.ca</a>).",
+
+    "faq.eyebrow": "Questions fréquentes", "faq.h2": "Vous vous demandez peut-être...",
+    "faq.q1.q": "Combien coûte un mandat avec Wavora&nbsp;?",
+    "faq.q1.a": "Nos tarifs dépendent du volume et de la complexité du mandat (nombre de transactions, d'employés, de processus à automatiser). On en discute ensemble lors de la consultation initiale pour proposer une offre adaptée à votre réalité.",
+    "faq.q2.q": "La première consultation est-elle vraiment gratuite&nbsp;?",
+    "faq.q2.a": "Oui. C'est un échange de 30 minutes pour analyser vos besoins et voir ensemble si on est faits pour travailler ensemble, sans obligation d'engagement.",
+    "faq.q3.q": "Comment fonctionnent les paiements&nbsp;?",
+    "faq.q3.a": "Le mode de paiement est flexible et s'ajuste selon la nature du mandat (ponctuel, récurrent, etc.). On établit la formule qui convient le mieux ensemble.",
+    "faq.q4.q": "Travaillez-vous à distance, en présentiel, ou les deux&nbsp;?",
+    "faq.q4.a": "Principalement à distance, mais des rencontres en présentiel restent possibles dans le grand Montréal.",
+    "faq.q5.q": "Quelle taille d'entreprise accompagnez-vous&nbsp;?",
+    "faq.q5.a": "Des travailleurs autonomes aux PME de 50 employés et plus.",
+    "faq.q6.q": "Mes données financières sont-elles en sécurité&nbsp;?",
+    "faq.q6.a": "Oui, vos données sont protégées conformément à la Loi 25 sur la protection des renseignements personnels. Pour en savoir plus, consultez notre <a href=\"confidentialite.html\">politique de confidentialité</a>.",
+    "faq.q7.q": "Puis-je prendre un seul service sans les autres&nbsp;?",
+    "faq.q7.a": "Oui, bien sûr. Chaque mandat est personnalisé, on prépare un forfait sur mesure selon vos besoins, seul ou en combinaison.",
   },
   en: {
     "nav.home": "Home", "nav.services": "Services",
@@ -247,6 +263,22 @@ const I18N = {
     "privacy.rights.body": "You may at any time request access to the information we hold about you, request that it be corrected, or withdraw your consent to its collection, by writing to <a href=\"mailto:bonjour@wavora.ca\">bonjour@wavora.ca</a>.",
     "privacy.complaint.h2": "Complaints",
     "privacy.complaint.body": "If you believe your rights have not been respected, you may file a complaint with the Commission d'accès à l'information du Québec (<a href=\"https://www.cai.gouv.qc.ca\" target=\"_blank\" rel=\"noopener\">cai.gouv.qc.ca</a>).",
+
+    "faq.eyebrow": "Frequently asked questions", "faq.h2": "You might be wondering...",
+    "faq.q1.q": "How much does a Wavora engagement cost&nbsp;?",
+    "faq.q1.a": "Our rates depend on the volume and complexity of the engagement (number of transactions, employees, processes to automate). We discuss it together during the initial consultation to put together an offer suited to your reality.",
+    "faq.q2.q": "Is the first consultation really free&nbsp;?",
+    "faq.q2.a": "Yes. It's a 30-minute conversation to review your needs and see together whether we're a good fit, with no obligation.",
+    "faq.q3.q": "How does payment work&nbsp;?",
+    "faq.q3.a": "The payment method is flexible and adjusts to the nature of the engagement (one-time, recurring, etc.). We work out the arrangement that suits you best together.",
+    "faq.q4.q": "Do you work remotely, in person, or both&nbsp;?",
+    "faq.q4.a": "Mainly remotely, but in-person meetings remain possible in the greater Montréal area.",
+    "faq.q5.q": "What size of business do you work with&nbsp;?",
+    "faq.q5.a": "From self-employed professionals to SMBs with 50+ employees.",
+    "faq.q6.q": "Is my financial data secure&nbsp;?",
+    "faq.q6.a": "Yes, your data is protected in accordance with Act 25 on the protection of personal information. To learn more, see our <a href=\"confidentialite.html\">privacy policy</a>.",
+    "faq.q7.q": "Can I take a single service without the others&nbsp;?",
+    "faq.q7.a": "Yes, absolutely. Every engagement is customized — we put together a tailored package based on your needs, alone or combined.",
   },
 };
 const LANG_KEY = "wavora-lang";
@@ -316,6 +348,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const here = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav__links a").forEach((a) => {
     if (a.getAttribute("href") === here) a.classList.add("is-active");
+  });
+
+  // Accordéon FAQ
+  document.querySelectorAll(".faq__question").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".faq__item");
+      const open = item.classList.toggle("is-open");
+      btn.setAttribute("aria-expanded", String(open));
+    });
   });
 
   // Révélation au défilement
