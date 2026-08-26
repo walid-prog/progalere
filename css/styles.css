@@ -267,9 +267,7 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 .cp-dot--coral { background: var(--cp-coral); }
 .cp-dot--yellow { background: var(--cp-yellow); }
 .cp-dot--mint { background: var(--cp-mint); }
-.cp-window--desktop .cp-brand { display: flex; align-items: center; gap: 9px; font-weight: 600; font-size: .92rem; color: var(--cp-text-1); }
-.cp-brand__mark { width: 24px; height: 24px; border-radius: 7px; background: var(--cp-accent-bg); color: var(--cp-accent-fg); display: grid; place-items: center; font-size: .78rem; font-weight: 700; }
-.cp-window--mobile .cp-brand { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; }
+.cp-brand { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); display: flex; align-items: center; }
 .cp-brand__logo { width: 30px; height: auto; display: block; }
 .cp-sync { display: flex; align-items: center; gap: 8px; font-size: .82rem; color: var(--cp-text-2); }
 .cp-sync__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--cp-mint); animation: cpPulse 2s ease-in-out infinite; }

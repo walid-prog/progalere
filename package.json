@@ -1,0 +1,9 @@
+{
+  "name": "wavora-site",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site vitrine Wavora — build minimal des partials header/footer, sans dépendance.",
+  "scripts": {
+    "build": "node build.js"
+  }
+}
