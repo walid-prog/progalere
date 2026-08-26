@@ -30,56 +30,124 @@
   <main>
     <section class="section">
       <div class="container">
-        <div class="about-hero reveal">
-          <div>
-            <span class="eyebrow" data-i18n="about.eyebrow">À propos</span>
-            <h1 data-i18n="about.h1">Un duo, une même exigence de qualité.</h1>
-            <p data-i18n="about.lead">Wavora, c'est la rencontre de deux mondes&nbsp;: la <strong>finance</strong> et la <strong>marque</strong>. Un ancien auditeur passé au service direct des PME et une stratège issue du marketing. Cofondateurs, épaulés par une équipe de spécialistes.</p>
-          </div>
-          <div class="about-portrait" aria-hidden="true">
-            <svg viewBox="0 0 200 200" fill="none">
-              <circle cx="74" cy="86" r="30" fill="var(--surface)"/>
-              <circle cx="126" cy="86" r="30" fill="var(--surface)"/>
-              <path d="M28 168c0-26 21-42 46-42s46 16 46 42z" fill="var(--surface)" opacity=".95"/>
-              <path d="M80 168c0-26 21-42 46-42s46 16 46 42z" fill="var(--surface)"/>
-              <path d="M24 140 Q60 116 100 140 T176 140" stroke="var(--c-auto)" stroke-width="6" fill="none" stroke-linecap="round" opacity=".6"/>
-            </svg>
-          </div>
+        <div class="story-intro reveal">
+          <span class="eyebrow" data-i18n="about.story.eyebrow">Notre histoire</span>
+          <h1 data-i18n="about.story.h1">Notre histoire, en quatre chapitres.</h1>
         </div>
       </div>
     </section>
 
-    <!-- FONDATEURS -->
-    <section class="section section--tint">
+    <!-- RÉCIT -->
+    <section class="section" style="padding-top:0">
       <div class="container">
-        <div class="section-head reveal"><span class="eyebrow" data-i18n="about.who.eyebrow">Qui sommes-nous</span><h2 data-i18n="about.who.h2">La finance et la marque, sous un même toit.</h2></div>
-        <div class="founders">
-          <article class="founder reveal" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
-            <div class="founder__avatar">WB</div>
-            <span class="founder__role" data-i18n="about.walid.role">Comptabilité &amp; automatisation</span>
-            <h3 data-i18n="about.walid.name">Walid B.</h3>
-            <p data-i18n="about.walid.desc">En voie d'être <strong>CPA</strong> et ancien auditeur en cabinet, il a accompagné des PME de secteurs variés (construction, commerce, services, santé, tech, OBNL, e-commerce…) en comptabilité comme en automatisation, une expertise forgée en freelance sur des mandats d'optimisation de processus. Tenue de livres, intégrations sur mesure, rigueur scientifique et goût d'expliquer chaque étape.</p>
-            <div class="founder__chips"><span>QuickBooks</span><span>Sage 50</span><span>Excel</span><span>Power Automate</span><span>Make</span></div>
-          </article>
-          <article class="founder reveal" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
-            <div class="founder__avatar">RB</div>
-            <span class="founder__role" data-i18n="about.rayane.role">Stratégie &amp; projets</span>
-            <h3 data-i18n="about.rayane.name">Rayane B.</h3>
-            <p data-i18n="about.rayane.desc">À la tête d'une agence marketing, elle a accompagné des dizaines d'entreprises&nbsp;: positionnement de marque, campagnes, contenu, publicité digitale, sites et CRM. Diplômée de <strong>HEC</strong> (gestion de projets &amp; marketing). Claire, structurée et orientée résultats.</p>
-            <div class="founder__chips"><span>Positionnement</span><span>Campagnes</span><span>CRM</span><span>Contenu</span></div>
-          </article>
-        </div>
+        <div class="story">
+          <div class="story__spine" aria-hidden="true">
+            <svg viewBox="0 0 64 900" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="storySpineGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#0ea5a4"/>
+                  <stop offset=".33" stop-color="#f9713b"/>
+                  <stop offset=".66" stop-color="#4f46e5"/>
+                  <stop offset="1" stop-color="#a855f7"/>
+                </linearGradient>
+              </defs>
+              <path d="M32 0 C6 60 58 100 32 170 C6 240 58 280 32 350 C6 420 58 460 32 530 C6 600 58 640 32 710 C6 780 58 820 32 890 L32 900" stroke="url(#storySpineGrad)" stroke-width="3" fill="none" stroke-linecap="round"/>
+            </svg>
+          </div>
 
-        <div class="founders" style="margin-top:20px">
-          <article class="founder reveal" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
-            <span class="founder__role" data-i18n="about.combo.role">Notre complémentarité</span>
-            <h3 data-i18n="about.combo.title">Finance + marque.</h3>
-            <p data-i18n="about.combo.desc">Des décisions appuyées sur les données, une exécution cohérente, et un seul duo de proximité pour avancer plus vite, sans jongler entre plusieurs prestataires.</p>
+          <!-- Chapitre 01 -->
+          <article class="story-chapter reveal" style="--accent:var(--c-compta);--accent-soft:var(--c-compta-soft)">
+            <div>
+              <span class="story-chapter__tag"><span class="dot"></span><span data-i18n="about.ch1.tag">Chapitre 01</span></span>
+              <h2 data-i18n="about.ch1.h2">Deux mondes qui ne se parlaient pas assez.</h2>
+              <p data-i18n="about.ch1.p1">L'un des cofondateurs venait du monde de l'audit&nbsp;: des années à éplucher les chiffres d'entreprises de toutes tailles, à voir de l'intérieur ce qui séparait une PME qui respire de celle qui s'essouffle. Ce n'était presque jamais une question de talent ou d'effort. C'était une question de <strong>temps perdu</strong>&nbsp;: des heures englouties dans la tenue de livres, des processus manuels qui auraient dû être automatisés depuis longtemps, des décisions prises à l'aveugle faute de chiffres à jour.</p>
+              <div class="story-chapter__tools">
+                <span class="story-chapter__tools-label" data-i18n="about.ch1.toolsLabel">Ses outils&nbsp;:</span>
+                <div class="story-chapter__chips"><span>QuickBooks</span><span>Sage 50</span><span>Excel</span><span>Power Automate</span><span>Make</span></div>
+              </div>
+            </div>
+            <div class="story-chapter__media">
+              <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-compta)" aria-hidden="true">
+                <circle cx="170" cy="100" r="90" fill="currentColor" opacity=".1"/>
+                <path d="M60 196 Q115 172 170 196 T280 196" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35"/>
+                <g transform="translate(116 46) scale(5)" opacity=".22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="10" cy="10" r="7"/><path d="M20 20 15.65 15.65"/><path d="M7 13v-3M10 13V7M13 13v-5"/>
+                </g>
+                <g transform="translate(110 40) scale(5)" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="10" cy="10" r="7"/><path d="M20 20 15.65 15.65"/><path d="M7 13v-3M10 13V7M13 13v-5"/>
+                </g>
+              </svg>
+            </div>
           </article>
-          <article class="founder reveal" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
-            <span class="founder__role" data-i18n="about.network.role">Notre réseau</span>
-            <h3 data-i18n="about.network.title">Une expertise élargie.</h3>
-            <p data-i18n="about.network.desc">Selon le besoin, nous collaborons avec des CPA, fiscalistes, informaticiens et développeurs partenaires. Vous gardez un point de contact unique chez Wavora, et des livrables documentés.</p>
+
+          <!-- Chapitre 02 -->
+          <article class="story-chapter reverse reveal" style="--accent:var(--c-strat);--accent-soft:var(--c-strat-soft)">
+            <div class="story-chapter__media">
+              <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-strat)" aria-hidden="true">
+                <circle cx="170" cy="100" r="90" fill="currentColor" opacity=".1"/>
+                <path d="M60 196 Q115 172 170 196 T280 196" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35"/>
+                <g transform="translate(116 46) scale(5)" opacity=".22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 10v4a1 1 0 0 0 1 1h2l8 5V4L6 9H4a1 1 0 0 0-1 1Z"/><path d="M17 9a4 4 0 0 1 0 6"/><path d="M20 7a7 7 0 0 1 0 10"/>
+                </g>
+                <g transform="translate(110 40) scale(5)" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 10v4a1 1 0 0 0 1 1h2l8 5V4L6 9H4a1 1 0 0 0-1 1Z"/><path d="M17 9a4 4 0 0 1 0 6"/><path d="M20 7a7 7 0 0 1 0 10"/>
+                </g>
+              </svg>
+            </div>
+            <div>
+              <span class="story-chapter__tag"><span class="dot"></span><span data-i18n="about.ch2.tag">Chapitre 02</span></span>
+              <h2 data-i18n="about.ch2.h2">Un même problème, vu sous un autre angle.</h2>
+              <p data-i18n="about.ch2.p1">L'autre cofondatrice venait du marketing, à la tête d'une agence qui accompagnait des dizaines d'entreprises sur leur positionnement, leurs campagnes, leur image. Le même constat, vu sous un autre angle&nbsp;: des entreprises qui avaient d'excellents produits ou services, mais qui restaient invisibles, ou qui communiquaient sans direction claire, faute de stratégie cohérente.</p>
+              <p data-i18n="about.ch2.p2">Deux expertises, un même problème observé sous deux angles différents. Les PME et les travailleurs autonomes jonglent avec trop de prestataires, trop peu connectés entre eux, pour un résultat qui reste <strong>fragmenté</strong>.</p>
+              <div class="story-chapter__tools">
+                <span class="story-chapter__tools-label" data-i18n="about.ch2.toolsLabel">Ses outils&nbsp;:</span>
+                <div class="story-chapter__chips"><span>Positionnement</span><span>Campagnes</span><span>CRM</span><span>Contenu</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Chapitre 03 -->
+          <article class="story-chapter reveal" style="--accent:var(--c-auto);--accent-soft:var(--c-auto-soft)">
+            <div>
+              <span class="story-chapter__tag"><span class="dot"></span><span data-i18n="about.ch3.tag">Chapitre 03</span></span>
+              <h2 data-i18n="about.ch3.h2">Une décision simple&nbsp;: arrêter de séparer ce qui devrait être ensemble.</h2>
+              <p data-i18n="about.ch3.p1">Plutôt que de continuer chacun de son côté, les deux cofondateurs ont choisi de réunir leurs expertises sous un même toit. Pas pour empiler des services de plus, mais pour offrir ce qu'ils cherchaient eux-mêmes en tant que professionnels&nbsp;: un seul point de contact, qui comprend à la fois les chiffres et la marque, capable de connecter la comptabilité, l'automatisation, la stratégie et la formation dans une seule vision cohérente.</p>
+              <p data-i18n="about.ch3.p2">C'est ce qui donne son nom à <strong>Wavora</strong>, l'idée d'un mouvement continu, de vagues qui se rejoignent plutôt que de silos qui s'ignorent.</p>
+              <p data-i18n="about.ch3.p3">Pour livrer cette vision avec la même exigence sur chaque expertise, les deux cofondateurs se sont entourés d'une équipe complète de spécialistes, capable de couvrir chaque aspect d'un mandat avec la même rigueur, du premier chiffre analysé jusqu'à la dernière campagne lancée.</p>
+            </div>
+            <div class="story-chapter__media">
+              <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-auto)" aria-hidden="true">
+                <circle cx="170" cy="100" r="90" fill="currentColor" opacity=".1"/>
+                <path d="M60 196 Q115 172 170 196 T280 196" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35"/>
+                <g transform="translate(116 46) scale(5)" opacity=".22" stroke="currentColor" stroke-width="1.7">
+                  <circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/>
+                </g>
+                <g transform="translate(110 40) scale(5)" stroke="currentColor" stroke-width="1.7">
+                  <circle cx="9" cy="12" r="6"/><circle cx="15" cy="12" r="6"/>
+                </g>
+              </svg>
+            </div>
+          </article>
+
+          <!-- Chapitre 04 -->
+          <article class="story-chapter reverse reveal" style="--accent:var(--c-form);--accent-soft:var(--c-form-soft)">
+            <div class="story-chapter__media">
+              <svg class="illus" viewBox="0 0 340 250" fill="none" style="color:var(--c-form)" aria-hidden="true">
+                <circle cx="170" cy="100" r="90" fill="currentColor" opacity=".1"/>
+                <path d="M60 196 Q115 172 170 196 T280 196" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" opacity=".35"/>
+                <g transform="translate(116 46) scale(5)" opacity=".22" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 19 8 10l4 6 3-5 6 8H3Z"/><path d="M3 19h18"/>
+                </g>
+                <g transform="translate(110 40) scale(5)" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M3 19 8 10l4 6 3-5 6 8H3Z"/><path d="M3 19h18"/>
+                </g>
+              </svg>
+            </div>
+            <div>
+              <span class="story-chapter__tag"><span class="dot"></span><span data-i18n="about.ch4.tag">Chapitre 04</span></span>
+              <h2 data-i18n="about.ch4.h2">Une vision qui dépasse le point de départ.</h2>
+              <p data-i18n="about.ch4.p1">Wavora a commencé avec quatre piliers&nbsp;: comptabilité opérationnelle, automatisation, stratégie et formations. Mais l'ambition ne s'arrête pas là. À mesure que les besoins des PME évoluent, avec l'<strong>IA</strong> qui redéfinit ce qui est possible pour une petite entreprise, Wavora entend élargir ce qu'elle offre, toujours dans la même logique&nbsp;: moins de fragmentation, plus de clarté, un seul partenaire de confiance pour grandir.</p>
+            </div>
           </article>
         </div>
       </div>
