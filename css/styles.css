@@ -442,6 +442,14 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 .section-head { max-width: 60ch; margin-bottom: 40px; }
 .section-head h2 { font-size: clamp(1.9rem, 4vw, 2.8rem); margin: 14px 0 14px; }
 
+/* Contenu juridique (politique de confidentialité) */
+.legal { max-width: 68ch; }
+.legal__updated { display: block; margin-top: 16px; font-size: .85rem; color: var(--muted); }
+.legal h2 { font-size: 1.3rem; margin: 44px 0 12px; }
+.legal h2:first-of-type { margin-top: 8px; }
+.legal p { color: var(--muted); margin: 0 0 4px; }
+.legal a { color: var(--c-auto); font-weight: 600; }
+
 /* Footer */
 .site-footer { background: var(--ink-2); color: #cdd3dd; padding: 60px 0 30px; }
 .site-footer a { color: #cdd3dd; }
@@ -453,6 +461,8 @@ h1, h2, h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; m
 .footer__col h4 { font-family: var(--font); font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: #7c8598; margin: 0 0 14px; }
 .footer__col ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; font-size: .95rem; }
 .footer__bottom { margin-top: 46px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.1); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; font-size: .85rem; color: #7c8598; }
+.footer__legal { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.footer__legal a::before { content: "\00B7"; margin-right: 10px; opacity: .7; }
 
 /* Reveal */
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
