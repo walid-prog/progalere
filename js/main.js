@@ -301,6 +301,43 @@ function setLang(lang) {
     b.classList.toggle("is-active", b.dataset.lang === lang);
     b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
   });
+  updateFaqSchema(lang);
+}
+
+/* ---------- Données structurées FAQPage ----------
+   Générées depuis le dictionnaire I18N (les mêmes clés faq.qN.q/a que
+   la section FAQ affichée), pour qu'elles ne puissent jamais se
+   désynchroniser du contenu visible. N'agit que sur les pages qui ont
+   une section #faq (aujourd'hui, seulement l'accueil). */
+function stripToText(html) {
+  return html.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+}
+function updateFaqSchema(lang) {
+  if (!document.getElementById("faq")) return;
+  const dict = I18N[lang] || I18N.fr;
+  const items = [];
+  for (let i = 1; i <= 20; i++) {
+    const q = dict[`faq.q${i}.q`] ?? I18N.fr[`faq.q${i}.q`];
+    const a = dict[`faq.q${i}.a`] ?? I18N.fr[`faq.q${i}.a`];
+    if (!q || !a) break;
+    items.push({
+      "@type": "Question",
+      "name": stripToText(q),
+      "acceptedAnswer": { "@type": "Answer", "text": stripToText(a) },
+    });
+  }
+  let script = document.getElementById("faq-schema");
+  if (!script) {
+    script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.id = "faq-schema";
+    document.head.appendChild(script);
+  }
+  script.textContent = JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": items,
+  });
 }
 
 /* ---------- Thème ---------- */
