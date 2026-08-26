@@ -80,8 +80,15 @@ h3 { font-family: var(--display); font-weight: 600; line-height: 1.05; margin: 0
 /* Boutons */
 .btn { display: inline-flex; align-items: center; gap: 10px; font-family: inherit; font-weight: 600; font-size: .98rem; padding: 14px 24px; border-radius: 999px; border: 1.5px solid transparent; cursor: pointer; transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .25s, border-color .25s; white-space: nowrap; }
 .btn svg { width: 18px; height: 18px; }
-.btn--primary { background: var(--ink); color: var(--paper); }
+.btn--primary { position: relative; background: var(--ink); color: var(--paper); }
+.btn--primary::before {
+  content: ""; position: absolute; inset: -4px; z-index: -1; border-radius: inherit;
+  background: linear-gradient(115deg, var(--c-compta), var(--c-auto) 55%, var(--c-form));
+  filter: blur(16px); opacity: 0; transition: opacity .35s var(--ease);
+}
 .btn--primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+.btn--primary:hover::before { opacity: .6; }
+@media (prefers-reduced-motion: reduce) { .btn--primary::before { transition: none; } }
 .btn--ghost { background: transparent; color: var(--ink); border-color: var(--line); }
 .btn--ghost:hover { border-color: var(--ink); transform: translateY(-2px); }
 .btn--lg { padding: 17px 30px; font-size: 1.05rem; }
