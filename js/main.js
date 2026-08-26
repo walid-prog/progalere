@@ -287,27 +287,20 @@ const I18N = {
     "faq.q7.a": "Yes, absolutely. Every engagement is customized — we put together a tailored package based on your needs, alone or combined.",
   },
 };
-const LANG_KEY = "wavora-lang";
 const THEME_KEY = "wavora-theme";
 
-function getLang() {
-  try { const s = localStorage.getItem(LANG_KEY); if (s === "fr" || s === "en") return s; } catch (e) {}
-  return "fr";
-}
-function setLang(lang) {
-  try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
-  document.documentElement.setAttribute("lang", lang);
-  document.querySelectorAll("[data-i18n]").forEach((el) => {
-    const key = el.getAttribute("data-i18n");
-    const dict = I18N[lang] || {};
-    if (dict[key] != null) el.innerHTML = dict[key];
-    else if (I18N.fr[key] != null) el.innerHTML = I18N.fr[key];
+/* Langue de la page courante : générée statiquement au build (fr à la
+   racine, en dans en/), lue depuis <html lang>. Le sélecteur FR/EN est
+   désormais une paire de liens vers l'URL équivalente dans l'autre
+   langue (voir build.js) ; il ne reste ici que l'affichage de l'état
+   actif du bon lien selon la page courante. */
+function updateActiveLangLink() {
+  const lang = document.documentElement.lang === "en" ? "en" : "fr";
+  document.querySelectorAll(".lang a[data-lang]").forEach((a) => {
+    const active = a.dataset.lang === lang;
+    a.classList.toggle("is-active", active);
+    a.setAttribute("aria-pressed", String(active));
   });
-  document.querySelectorAll(".lang button").forEach((b) => {
-    b.classList.toggle("is-active", b.dataset.lang === lang);
-    b.setAttribute("aria-pressed", String(b.dataset.lang === lang));
-  });
-  updateFaqSchema(lang);
 }
 
 /* ---------- Données structurées FAQPage ----------
@@ -358,10 +351,8 @@ function currentTheme() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  setLang(getLang());
-  document.querySelectorAll(".lang button").forEach((b) =>
-    b.addEventListener("click", () => setLang(b.dataset.lang))
-  );
+  updateActiveLangLink();
+  updateFaqSchema(document.documentElement.lang === "en" ? "en" : "fr");
 
   // Interrupteur clair/sombre
   const themeBtn = document.querySelector(".switch");
@@ -387,10 +378,14 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 
-  // Lien actif
-  const here = location.pathname.split("/").pop() || "index.html";
+  // Lien actif (comparaison par chemin résolu : fonctionne aussi bien
+  // avec les liens relatifs des pages fr qu'avec les liens /en/... absolus
+  // des pages anglaises)
   document.querySelectorAll(".nav__links a").forEach((a) => {
-    if (a.getAttribute("href") === here) a.classList.add("is-active");
+    const href = a.getAttribute("href");
+    if (href && new URL(href, location.href).pathname === location.pathname) {
+      a.classList.add("is-active");
+    }
   });
 
   // Accordéon FAQ
