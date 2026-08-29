@@ -1,3 +1,4 @@
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import BrandLogo from "./BrandLogo";
 
 type ModuleIconName = "overview" | "invoice" | "accounting" | "marketing" | "email";
@@ -19,11 +20,12 @@ const modules=[
 ];
 
 export default function ClientPlatformPreview(){return <section className="platform-section" data-atmosphere="3">
-  <div className="shell platform-intro">
-    <div><p className="kicker">Espace client intégré</p><h2>Tout votre quotidien.<br/><em>Une seule vue.</em></h2></div>
-    <div><p>Facturation, comptabilité, marketing et courriels travaillent enfin ensemble. Vous voyez ce qui avance, ce qui demande votre attention et ce qui peut être automatisé.</p><span className="preview-disclaimer">Aperçu illustratif de l’expérience Wavora</span></div>
-  </div>
-  <div className="shell platform-stage">
+  <ContainerScroll titleComponent={
+    <div className="shell platform-intro">
+      <div><p className="kicker">Espace client intégré</p><h2>Tout votre quotidien.<br/><em>Une seule vue.</em></h2></div>
+      <div><p>Facturation, comptabilité, marketing et courriels travaillent enfin ensemble. Vous voyez ce qui avance, ce qui demande votre attention et ce qui peut être automatisé.</p><span className="preview-disclaimer">Aperçu illustratif de l’expérience Wavora</span></div>
+    </div>
+  }>
     <div className="platform-window" aria-label="Aperçu illustratif de la plateforme client Wavora">
       <div className="platform-topbar"><div className="platform-product"><BrandLogo label={false}/><span className="platform-concept-badge">Aperçu conceptuel</span></div><div className="sync-state"><i/>Une vision, plusieurs expertises</div></div>
       <div className="platform-body">
@@ -43,5 +45,5 @@ export default function ClientPlatformPreview(){return <section className="platf
         </div>
       </div>
     </div>
-  </div>
+  </ContainerScroll>
 </section>}

@@ -4,12 +4,12 @@ import test from "node:test";
 const developmentPreviewMeta =
   /<meta(?=[^>]*\bname=["']codex-preview["'])(?=[^>]*\bcontent=["']development["'])[^>]*>/i;
 
-test("renders Wavora production metadata", async () => {
+async function renderHome() {
   const workerUrl = new URL("../dist/server/index.js", import.meta.url);
   workerUrl.searchParams.set("test", `${process.pid}-${Date.now()}`);
   const { default: worker } = await import(workerUrl.href);
 
-  const response = await worker.fetch(
+  return worker.fetch(
     new Request("http://localhost/", {
       headers: { accept: "text/html" },
     }),
@@ -23,6 +23,10 @@ test("renders Wavora production metadata", async () => {
       passThroughOnException() {},
     },
   );
+}
+
+test("renders Wavora production metadata", async () => {
+  const response = await renderHome();
 
   assert.equal(response.status, 200);
   assert.match(
@@ -33,4 +37,15 @@ test("renders Wavora production metadata", async () => {
   assert.match(html, /<html\b[^>]*\blang=["']fr["']/i);
   assert.match(html, /<title>Wavora \| Faites avancer l’entreprise<\/title>/i);
   assert.doesNotMatch(html, developmentPreviewMeta);
+});
+
+test("renders the complete client portal inside its scroll scene", async () => {
+  const response = await renderHome();
+  const html = await response.text();
+
+  assert.equal(response.status, 200);
+  assert.match(html, /data-container-scroll=["']["']/i);
+  assert.match(html, /Bonjour, Marie\./i);
+  assert.match(html, /12 480 \$/i);
+  assert.match(html, /Automatisations actives/i);
 });

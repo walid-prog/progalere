@@ -674,3 +674,79 @@ html{background:#fff}body,.site-header,.mini-service,.icon-box,.path-section,.pa
 @media(max-width:950px){.nav-links{display:none;position:absolute;left:24px;right:24px;top:66px;gap:6px;padding:21px;flex-direction:column;align-items:stretch;border:1px solid rgba(6,28,37,.14);border-radius:18px;background:rgba(255,255,255,.97);box-shadow:0 22px 50px rgba(6,28,37,.15);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}.nav-links.open{display:flex}.nav-links:before{display:none}.nav-links>a{padding:11px 10px;display:flex;flex-direction:row;align-items:center;gap:10px;border-radius:10px}.nav-links>a:after{display:none!important}.nav-links>a:hover,.nav-links>a.active{background:rgba(65,199,174,.1)!important;transform:none}.nav-links>a:last-of-type{justify-content:center;margin-top:4px;padding:13px 17px;background:var(--night)!important;color:#fff}.lang-switch{align-self:flex-start;margin:2px 0 0}}
 @media(max-width:950px){[data-theme="dark"] .nav-links{background:rgba(13,42,52,.97);border-color:rgba(255,255,255,.14)}[data-theme="dark"] .nav-links>a:last-of-type{background:var(--mint)!important;color:var(--night)}}
 @media(max-width:660px){.nav-links{left:14px;right:14px;top:62px;padding:16px}.nav-links .nav-label{font-size:.69rem}.home-experience .hero-copy h1 em{font-size:.65em}.home-tools-heading h2 span{font-size:.78em}}
+
+/* Scroll-led reveal for the useful client dashboard. */
+.home-experience .platform-section {
+  padding: 0;
+}
+
+.platform-scroll-scene {
+  min-height: 80rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.platform-scroll-content {
+  width: 100%;
+  padding: 8rem 0 10rem;
+  perspective: 1400px;
+}
+
+.platform-scroll-title,
+.platform-scroll-card {
+  will-change: transform;
+}
+
+.platform-scroll-card {
+  margin-top: 64px;
+  perspective: none;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.platform-scroll-card .platform-window {
+  animation: none;
+}
+
+[data-theme="dark"] .platform-scroll-card {
+  filter: drop-shadow(0 38px 54px rgba(0, 0, 0, 0.16));
+}
+
+@media (max-width: 950px) {
+  .platform-scroll-scene {
+    min-height: 82rem;
+  }
+
+  .platform-scroll-content {
+    padding: 7rem 0 9rem;
+  }
+
+  .platform-scroll-card {
+    margin-top: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .platform-scroll-scene {
+    min-height: 0;
+    display: block;
+  }
+
+  .platform-scroll-content {
+    padding: 92px 0 100px;
+    perspective: 900px;
+  }
+
+  .platform-scroll-card {
+    margin-top: 38px;
+    transform-origin: center top !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .platform-scroll-title,
+  .platform-scroll-card {
+    transform: none !important;
+  }
+}
